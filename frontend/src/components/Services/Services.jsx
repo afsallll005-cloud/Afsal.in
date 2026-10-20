@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Services.css";
 
 const servicesData = [
@@ -54,6 +54,30 @@ const servicesData = [
 export default function Services() {
   const [activeIdx, setActiveIdx] = useState(0);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-index"));
+            if (!isNaN(index)) {
+              setActiveIdx(index);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "-20% 0px -45% 0px",
+        threshold: 0.15,
+      }
+    );
+
+    const cards = document.querySelectorAll(".vl-service-row");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToService = (index) => {
     setActiveIdx(index);
     const target = document.getElementById(`service-card-${index}`);
@@ -105,6 +129,7 @@ export default function Services() {
                 <div
                   key={service.num}
                   id={`service-card-${index}`}
+                  data-index={index}
                   className={`vl-service-row ${isEven ? "normal" : "reverse"}`}
                   onMouseEnter={() => setActiveIdx(index)}
                 >

@@ -93,13 +93,70 @@ const defaultProjects = [
       image: "./images/Project08.jpeg",
     link: "",
   },
+
+
+
+
+
+
+
+
+
+
+
+
+   {
+    id: "p9",
+    title: "Architype",
+    category: "Static",
+    year: "2026",
+    tags: [ "React", "Express"],
+    description:
+      "A modern architecture website designed to showcase innovative architectural concepts, residential projects, and contemporary design solutions. The platform combines elegant layouts, high-quality visuals, and carefully structured content to create an immersive browsing experience. With a focus on clean aesthetics, responsive design, and intuitive navigation, Architype presents architectural creativity through a sophisticated digital presence that works seamlessly across desktop, tablet, and mobile devices.",
+      image: "./images/Project05.jpeg",
+    link: "",
+  },
+  {
+    id: "p10",
+    title: "ERP",
+    category: "Saas Application",
+    year: "2025",
+    tags: ["Next.js", "Express", "PostgrSQL", "Charts"],
+    description:
+      "A comprehensive Enterprise Resource Planning (ERP) system developed as part of a collaborative internship project. The platform is designed to simplify business operations by organizing inventory management, product tracking, and essential administrative workflows in one centralized system. My primary contribution focused on frontend development, creating responsive user interfaces, reusable components, and intuitive layouts to ensure a smooth and efficient user experience.",
+      image: "./images/Project06.jpeg",
+    link: "",
+  },
+  {
+    id: "p11",
+    title: "Ziora",
+    category: "E-Commerce",
+    year: "2026",
+    tags: ["Html", "Css", "Javascript"],
+    description:
+      "A modern fashion e-commerce website developed to showcase contemporary clothing through an elegant and visually engaging digital storefront. Ziora focuses on presenting collections with clean product layouts, stylish imagery, and intuitive navigation. The platform combines responsive design, modern UI components, and a streamlined shopping experience to create a fashion-focused website that reflects the brand's identity while making it easy for customers to explore different styles and collections.",
+      image: "./images/Project07.jpeg",
+    link: "https://afsallll005-cloud.github.io/zioraFashion/",
+  },
+  {
+    id: "p12",
+    title: "Ziora Perfumes",
+    category: "E-Commerce",
+    year: "2026",
+    tags: ["React", "Express", "Node.js", "MongoDB"],
+    description:
+      "A premium fragrance e-commerce website created to present perfumes through a refined and elegant digital shopping experience. Ziora Perfumes combines sophisticated visual styling, carefully arranged product displays, and a clean interface to communicate the character of a luxury fragrance brand. The website emphasizes product presentation, intuitive navigation, and responsive layouts to help customers explore fragrances in a polished and engaging online environment.",
+      image: "./images/Project08.jpeg",
+    link: "",
+  },
 ];
+
+const INITIAL_PROJECT_COUNT = 8;
 
 export default function Works() {
   const [showMore, setShowMore] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [mainProjects, setMainProjects] = useState(defaultProjects);
-  const [moreProjects, setMoreProjects] = useState([]);
+  const [projects, setProjects] = useState(defaultProjects);
   const [loading, setLoading] = useState(false);
 
   /* =========================================================
@@ -134,13 +191,7 @@ export default function Works() {
               link: p.link || "#",
             });
 
-            // In a 4-column poster grid, show 8 projects initially (2 full rows of 4)
-            const initialCount = 8;
-            const mainProjectsList = data.slice(0, initialCount).map(formatProject);
-            const additional = data.slice(initialCount).map(formatProject);
-
-            setMainProjects(mainProjectsList);
-            setMoreProjects(additional);
+            setProjects(data.map(formatProject));
           }
         }
       } catch (err) {
@@ -154,11 +205,25 @@ export default function Works() {
   }, []);
 
   /* =========================================================
-     DISPLAYED PROJECTS
+     DISPLAYED PROJECTS & LOAD MORE TOGGLE
   ========================================================= */
   const displayedProjects = showMore
-    ? [...mainProjects, ...moreProjects]
-    : mainProjects;
+    ? projects
+    : projects.slice(0, INITIAL_PROJECT_COUNT);
+
+  const hasMoreProjects = projects.length > INITIAL_PROJECT_COUNT;
+
+  const handleToggleShowMore = () => {
+    if (showMore) {
+      setShowMore(false);
+      const section = document.getElementById("projects");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      setShowMore(true);
+    }
+  };
 
   /* =========================================================
      CLOSE MODAL & ESCAPE LISTENER
@@ -273,18 +338,27 @@ export default function Works() {
           )}
 
           {/* =================================================
-              LOAD MORE BUTTON
+              VIEW MORE PROJECTS BUTTON (AFTER 8 WORKS)
           ================================================== */}
-          {moreProjects.length > 0 && (
+          {hasMoreProjects && (
             <div className="works-cta-container">
               <button
                 type="button"
                 className="load-more-btn"
-                onClick={() => setShowMore((prev) => !prev)}
-                aria-label={showMore ? "Show fewer projects" : "Load more projects"}
+                onClick={handleToggleShowMore}
+                aria-label={showMore ? "Show fewer projects" : "View more projects"}
               >
-                <span>
-                  {showMore ? "Show Less" : `Load More (${moreProjects.length})`}
+                <span>{showMore ? "Show Less" : "More Projects"}</span>
+                <span className="load-more-icon" aria-hidden="true">
+                  {showMore ? (
+                    <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+                      <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z" />
+                    </svg>
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
+                    </svg>
+                  )}
                 </span>
               </button>
             </div>

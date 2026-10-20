@@ -7,15 +7,15 @@ export default function CTABanner({ onOpenContact }) {
     <section className="vl-section vl-cta-section" aria-label="Start a software project">
       <div className="vl-container">
         <div className="vl-cta-box">
-          {/* BACKGROUND AMBIENT VIDEO */}
-          <video
-            src="https://framerusercontent.com/assets/KcHC4vOiUqiIIQeDrfDHir3qY.mp4"
-            poster="https://framerusercontent.com/images/tMTA1vKtPMp9H2MVL1eQNaXYus.webp?width=1280&height=720"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="vl-cta-video"
+          {/* BACKGROUND AMBIENT IMAGE */}
+          <img
+            src="https://framerusercontent.com/images/tMTA1vKtPMp9H2MVL1eQNaXYus.webp?width=1280&height=720"
+            alt="MHD Afsal CTA Background"
+            className="vl-cta-img"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = "/images/forma-hero.jpg";
+            }}
           />
           <div className="vl-cta-shade" />
 
@@ -35,10 +35,7 @@ export default function CTABanner({ onOpenContact }) {
                 <span className="vl-cta-subtext">Let’s Build Together</span>
               </div>
 
-              <div className="vl-hud-chips">
-                <span className="vl-hud-chip">FULL-STACK</span>
-                <span className="vl-hud-chip">NEXT.JS 15</span>
-              </div>
+              
             </div>
 
             {/* BOTTOM ROW */}

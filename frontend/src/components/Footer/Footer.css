@@ -1,134 +1,225 @@
+/* =========================================================
+   BLACK MINIMALIST FOOTER ("LET'S TALK")
+========================================================= */
+
 .vl-footer {
   width: 100%;
-  border-top: 1px solid var(--border-subtle);
-  background-color: var(--bg-primary);
-  padding: 80px var(--section-pad-x) 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #000000;
+  padding: 120px var(--section-pad-x) 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* GIANT TOP WORDMARK */
-.vl-footer-wordmark-wrap {
+.vl-footer .vl-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width, 1300px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CENTERED HERO: SOCIALS + "LET'S TALK"
+========================================================= */
+
+.vl-footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 96px;
+}
+
+/* SOCIAL ICONS ROW */
+.vl-footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.vl-social-card {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  transition:
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease,
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.28s ease;
+}
+
+.vl-social-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: var(--accent-neon, #d8f709);
+  color: var(--accent-neon, #d8f709);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(216, 247, 9, 0.25);
+}
+
+/* "LET'S TALK ↗" TYPOGRAPHY BUTTON */
+.vl-talk-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.vl-talk-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.vl-talk-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.vl-talk-title {
+  font-family: var(--font-display, "TASA Orbiter", "Plus Jakarta Sans", sans-serif);
+  font-size: clamp(48px, 6.8vw, 92px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.vl-talk-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
+}
+
+.vl-talk-arrow svg {
+  width: clamp(34px, 4.4vw, 54px);
+  height: clamp(34px, 4.4vw, 54px);
+}
+
+/* SOLID HORIZONTAL UNDERLINE */
+.vl-talk-underline {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  margin-top: 14px;
+  border-radius: 2px;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* HOVER MICRO-INTERACTIONS */
+.vl-talk-btn:hover .vl-talk-title {
+  color: var(--accent-neon, #d8f709);
+}
+
+.vl-talk-btn:hover .vl-talk-arrow {
+  color: var(--accent-neon, #d8f709);
+  transform: translate(6px, -6px);
+}
+
+.vl-talk-btn:hover .vl-talk-underline {
+  background-color: var(--accent-neon, #d8f709);
+  box-shadow: 0 0 16px rgba(216, 247, 9, 0.6);
+  transform: scaleY(1.33);
+}
+
+/* =========================================================
+   BOTTOM ROW: DIVIDER + EMAIL + COPYRIGHT
+========================================================= */
+
+.vl-footer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 28px;
+}
+
+.vl-footer-bottom {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 60px;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 20px;
+  font-family: var(--font-body, "Inter", sans-serif);
 }
 
-.vl-footer-wordmark-left {
+.vl-footer-email {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.25s ease;
+}
+
+.vl-footer-email:hover {
+  color: var(--accent-neon, #d8f709);
+}
+
+.vl-footer-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.vl-footer-slate {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border-subtle);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.vl-footer-giant-title {
-  font-family: var(--font-display);
-  font-size: 80px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  line-height: 0.9;
-  text-transform: uppercase;
-}
-
-.vl-footer-inquire-btn {
-  background: var(--text-primary);
-  color: #000;
-  border-color: var(--text-primary);
-  font-weight: 600;
-}
-
-.vl-footer-inquire-btn:hover {
-  background: var(--accent-neon);
-  border-color: var(--accent-neon);
-  color: #000;
-}
-
-/* 5 COLUMNS */
-.vl-footer-cols {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
-  gap: 40px;
-  padding-top: 60px;
-  width: 100%;
-}
-
-.vl-footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.vl-footer-col-title {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.vl-footer-col-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.vl-footer-link {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-light);
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.vl-footer-link:hover {
-  color: var(--accent-neon);
-}
-
-.vl-footer-link.highlight {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.vl-footer-info {
-  font-family: var(--font-body);
+.vl-footer-copyright {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: -0.01em;
 }
 
 .vl-footer-admin-link {
-  display: inline-block;
-  margin-top: 8px;
   font-size: 12px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .vl-footer-admin-link:hover {
-  color: var(--accent-neon);
+  color: var(--accent-neon, #d8f709);
 }
 
-/* CONTACT MODAL DIALOG */
+/* =========================================================
+   CONTACT INQUIRY MODAL (FULL EXPERIENCE)
+========================================================= */
+
 .vl-contact-dialog {
   max-width: 600px;
   background: #141414;
   padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
 
 .vl-contact-modal-head {
@@ -175,7 +266,7 @@
 .vl-form-textarea {
   background: #1a1a1a;
   border: 1px solid var(--border-subtle);
-  border-radius: 0;
+  border-radius: 4px;
   padding: 14px 16px;
   font-family: var(--font-body);
   font-size: 15px;
@@ -243,36 +334,86 @@
   color: var(--text-secondary);
 }
 
-/* RESPONSIVE FOOTER */
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+========================================================= */
+
 @media (max-width: 1024px) {
-  .vl-footer-cols {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  .vl-footer {
+    padding: 100px 32px 36px;
   }
-  .vl-footer-giant-title {
-    font-size: 56px;
+
+  .vl-footer-center {
+    margin-bottom: 80px;
+    gap: 36px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .vl-footer {
-    padding: 60px 20px 40px;
+    padding: 80px 24px 32px;
   }
-  .vl-footer-wordmark-wrap {
-    padding-bottom: 40px;
-  }
-  .vl-footer-giant-title {
-    font-size: 38px;
-  }
-  .vl-footer-cols {
-    grid-template-columns: 1fr;
+
+  .vl-footer-center {
+    margin-bottom: 60px;
     gap: 30px;
-    padding-top: 40px;
   }
+
+  .vl-social-card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vl-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .vl-footer-right {
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .vl-contact-dialog {
     padding: 24px;
   }
+
   .vl-contact-modal-title {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vl-footer {
+    padding: 70px 18px 28px;
+  }
+
+  .vl-social-card {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .vl-talk-title {
+    font-size: 40px;
+  }
+
+  .vl-talk-arrow svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .vl-talk-underline {
+    height: 2.5px;
+    margin-top: 10px;
+  }
+
+  .vl-footer-email {
+    font-size: 14px;
+  }
+
+  .vl-footer-copyright {
+    font-size: 13px;
   }
 }

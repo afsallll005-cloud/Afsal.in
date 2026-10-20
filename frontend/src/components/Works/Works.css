@@ -218,11 +218,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 0 32px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 9999px;
-  background-color: #ffffff;
-  color: #000000;
+  /* border-radius: 9999px; */
+  /* background-color: #ffffff; */
+  color: #ffffff;
   font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
   font-size: 14px;
   font-weight: 600;
@@ -239,10 +240,20 @@
 
 .load-more-btn:hover {
   background-color: #d8f709;
-  color: #ffffff;
+  color: #000000;
   border-color: #d8f709;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(255, 107, 0, 0.3);
+}
+
+.load-more-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.load-more-btn:hover .load-more-icon {
+  transform: translateY(2px);
 }
 
 /* =========================================================
