@@ -26,7 +26,7 @@ export default function Brands() {
     <section className="vl-section vl-brands-section" aria-label="Brands and Technologies">
       <div className="vl-container">
         <div className="vl-brands-inner">
-          <p className="vl-brands-title">Trusted by brands & modern tech</p>
+          <p className="vl-brands-title">Built with Modern Technologies  </p>
 
           <div className="vl-brands-ticker-wrap">
             <div className="vl-brands-track">

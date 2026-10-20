@@ -7,281 +7,375 @@ import "./Works.css";
 const defaultProjects = [
   {
     id: "p1",
-    title: "Night Shift",
-    client: "Auriga Motors",
-    category: "Commercial Web Platform",
+    title: "Flintsector",
+    category: "E-Commerce",
     year: "2026",
-    tags: ["Next.js", "Full-Stack", "WebGL", "TailwindCSS"],
+    tags: ["Next.js", "Express.js", "PostgraSQL", "TailwindCSS"],
     description:
-      "A cinematic, high-performance web experience engineered for Auriga Motors to unveil their flagship electric vehicle lineup. Features bespoke interactive 3D configurators and silky micro-interactions.",
-    video: "https://framerusercontent.com/assets/9gNwmqnLF1D0ucWUdIF6D9USm0.mp4",
-    poster: "https://framerusercontent.com/images/r2sIkyJmYp1lg2LUDUR7ykhHlfU.webp?width=1080&height=1080",
-    ratio: "708 / 560",
-    link: "https://videolab-gr8r.framer.website/projects/night-shift",
+      "FlintSector is a modern streetwear e-commerce store specializing in oversized T-shirts and jersey bottom pants. Designed for streetwear enthusiasts, it combines bold styles, premium aesthetics, and a smooth shopping experience. The website features stylish product collections, detailed product pages, and WhatsApp-based ordering for a convenient and seamless shopping journey.",
+    image: "./images/Project01.jpeg",
+    link: "https://flintsector-1eqj.vercel.app/",
   },
   {
     id: "p2",
-    title: "The Climb",
-    client: "Vertex Studio",
-    category: "Brand Experience & Motion",
+    title: "Buytora",
+    category: "Rental Website",
     year: "2026",
     tags: ["React", "UI/UX Design", "Framer Motion", "Design System"],
     description:
-      "An immersive digital portfolio and creative showcase built for an international architectural studio. Emphasizes negative space, Swiss typography, and smooth transitions.",
-    video: "https://framerusercontent.com/assets/ffpTxFiSyMY4c9dTqhU8RnNAd20.mp4",
-    poster: "https://framerusercontent.com/images/mdbyatdRB8vnSBtUl9Y7JEI.webp?width=1080&height=1080",
-    ratio: "576 / 560",
-    link: "https://videolab-gr8r.framer.website/projects/the-climb",
+      "A premium rental property platform designed to help users discover homes, apartments, and commercial properties through an intuitive search experience. Baytora brings together property listings, location-based discovery, detailed property information, and flexible filtering options to simplify the rental search process. Inspired by modern real estate platforms, the website focuses on elegant visuals, structured property cards, and responsive layouts to deliver a seamless experience for users exploring properties across different locations.",
+      image: "./images/Project02.png",
+    link: "https://baytora.vercel.app/",
   },
   {
     id: "p3",
-    title: "Step Into It",
-    client: "Noir Athletics",
-    category: "Headless E-Commerce",
-    year: "2025",
-    tags: ["E-Commerce", "Next.js 15", "Stripe", "TailwindCSS"],
+    title: "Travelyn",
+    category: " Package Booking Platform",
+    year: "2026",
+    tags: ["React", "Next.js", "Express", "TailwindCSS"],
     description:
-      "A fast, editorial-style e-commerce platform for high-end athletic wear. Features instant faceted search, custom cart drawers, and a seamless one-page checkout funnel.",
-    video: "https://framerusercontent.com/assets/llBvw6I5IPBSDnqRLlfOkbThPao.mp4",
-    poster: "https://framerusercontent.com/images/TfNrO6VLYd2MNYbxK89dTYoNVVs.webp?width=1280&height=720",
-    ratio: "576 / 560",
-    link: "https://videolab-gr8r.framer.website/projects/step-into-it",
+      "Travelyn is a modern travel package booking platform designed to help users explore destinations and discover exciting holiday packages. The website showcases a variety of travel experiences, including vacation packages, destination highlights, and trip options to suit different travel preferences. With an intuitive interface, engaging visuals, and organized package listings, Travelyn makes it easier for users to explore travel opportunities and plan their next adventure. The platform combines responsive design with a user-friendly browsing experience, delivering a smooth and convenient journey across desktop, tablet, and mobile devices.",
+      image: "./images/Project03.jpeg",
+    link: "",
   },
   {
     id: "p4",
-    title: "Open Road",
-    client: "Northbound",
-    category: "SaaS Digital Experience",
-    year: "2025",
-    tags: ["Full-Stack", "Node.js", "React", "REST API"],
+    title: "TripzyGo",
+    category: "Package Booking Platform",
+    year: "2026",
+    tags: ["React", "Node.js", "Express", "REST API"],
     description:
-      "Enterprise platform for fleet logistics and road trip routing. Designed from ground up with an uncompromising focus on clarity, performance, and dark-mode aesthetic.",
-    video: "https://framerusercontent.com/assets/RkE45CsEYJC5J7jDUkGITJXDNhg.mp4",
-    poster: "https://framerusercontent.com/images/pOvp1xdKytqJCFRrOVwk9OHwoTU.webp?width=1280&height=720",
-    ratio: "708 / 560",
-    link: "https://videolab-gr8r.framer.website/projects/open-road",
+      "An intelligent travel planning platform that combines destination discovery with AI-powered personalized trip creation. TripzyGo enables users to explore travel packages and generate customized itineraries based on their preferences, interests, and travel goals. The website brings together modern UI design, organized package listings, and interactive planning features to make travel preparation more convenient, engaging, and personalized.",
+      image: "./images/Project04.jpeg",
+    link: "https://tripzygofrontend-eta.vercel.app/",
+  },
+  {
+    id: "p5",
+    title: "Digicam",
+    category: "E-Commerce",
+    year: "2026",
+    tags: ["Figma", "Design Tokens", "React", "Radix UI"],
+    description:
+      "A modern e-commerce platform dedicated to cameras, photography equipment, and essential accessories. Camora is designed to help photography enthusiasts discover products through a clean interface, visually appealing product displays, and organized shopping categories. The website combines responsive design with a user-friendly browsing experience, creating a professional digital storefront that highlights photography products while making product exploration simple and convenient.",
+      image: "./images/Project05.jpeg",
+    link: "https://digicam-sooty.vercel.app/",
+  },
+  {
+    id: "p6",
+    title: "Kinza",
+    category: "Static",
+    year: "2025",
+    tags: ["Next.js", "Express", "MongoDB", "Charts"],
+    description:
+      "A vibrant beverage website designed to showcase refreshing drinks through colorful visuals, engaging product presentations, and a modern digital experience. Kinza focuses on creating a lively brand identity with attractive layouts, clear content hierarchy, and intuitive navigation. Its responsive interface ensures a consistent experience across different screen sizes while presenting beverage products in a visually appealing and accessible way.",
+      image: "./images/Project06.jpeg",
+    link: "",
+  },
+  {
+    id: "p7",
+    title: "Ziora",
+    category: "E-Commerce",
+    year: "2026",
+    tags: ["Html", "Css", "Javascript"],
+    description:
+      "A modern fashion e-commerce website developed to showcase contemporary clothing through an elegant and visually engaging digital storefront. Ziora focuses on presenting collections with clean product layouts, stylish imagery, and intuitive navigation. The platform combines responsive design, modern UI components, and a streamlined shopping experience to create a fashion-focused website that reflects the brand's identity while making it easy for customers to explore different styles and collections.",
+      image: "./images/Project07.jpeg",
+    link: "https://afsallll005-cloud.github.io/zioraFashion/",
+  },
+  {
+    id: "p8",
+    title: "Ziora Perfumes",
+    category: "E-Commerce",
+    year: "2026",
+    tags: ["React", "Express", "Node.js", "MongoDB"],
+    description:
+      "A premium fragrance e-commerce website created to present perfumes through a refined and elegant digital shopping experience. Ziora Perfumes combines sophisticated visual styling, carefully arranged product displays, and a clean interface to communicate the character of a luxury fragrance brand. The website emphasizes product presentation, intuitive navigation, and responsive layouts to help customers explore fragrances in a polished and engaging online environment.",
+      image: "./images/Project08.jpeg",
+    link: "",
   },
 ];
 
 export default function Works() {
+  const [showMore, setShowMore] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [allProjects, setAllProjects] = useState(defaultProjects);
-  const [showAllModal, setShowAllModal] = useState(false);
+  const [mainProjects, setMainProjects] = useState(defaultProjects);
+  const [moreProjects, setMoreProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  // Fetch projects from backend if present, merging with defaults
+  /* =========================================================
+     FETCH PROJECTS FROM BACKEND
+  ========================================================= */
   useEffect(() => {
-    const fetchBackendProjects = async () => {
+    const fetchProjects = async () => {
+      setLoading(true);
+
       try {
         const res = await fetch(`${API_BASE_URL}/projects`);
+
         if (res.ok) {
           const data = await res.json();
+
           if (Array.isArray(data) && data.length > 0) {
-            const formatted = data.map((p, idx) => ({
-              id: p._id || p.numberId || `be-${idx}`,
-              title: p.title || `Project 0${idx + 1}`,
-              client: p.client || p.title || "Client Project",
-              category: p.type || "Web Design & Development",
-              year: p.year || "2026",
-              tags: Array.isArray(p.tags) ? p.tags : (p.tags ? p.tags.split(",") : ["Web Design", "Development"]),
-              description: p.description || "A bespoke digital experience crafted with precision and modern design standards.",
-              video: p.video || defaultProjects[idx % defaultProjects.length].video,
-              poster: p.image || defaultProjects[idx % defaultProjects.length].poster,
-              ratio: idx % 2 === 0 ? "708 / 560" : "576 / 560",
+            const formatProject = (p, idx) => ({
+              id: p._id || p.numberId || `proj-${idx}`,
+              title: p.title || "Untitled Project",
+              category: p.type || "Design & Development",
+              image: p.image || defaultProjects[idx % defaultProjects.length].image,
+              tags: Array.isArray(p.tags)
+                ? p.tags
+                : p.tags
+                ? p.tags.split(",").map((t) => t.trim()).filter(Boolean)
+                : ["Design", "Development"],
+              year: p.year || "2025",
+              description:
+                p.description ||
+                p.type ||
+                "A bespoke digital experience crafted with precision and modern design standards.",
               link: p.link || "#",
-            }));
-            setAllProjects(formatted);
+            });
+
+            // In a 4-column poster grid, show 8 projects initially (2 full rows of 4)
+            const initialCount = 8;
+            const mainProjectsList = data.slice(0, initialCount).map(formatProject);
+            const additional = data.slice(initialCount).map(formatProject);
+
+            setMainProjects(mainProjectsList);
+            setMoreProjects(additional);
           }
         }
       } catch (err) {
-        console.warn("Using default curated projects", err);
+        console.warn("Could not fetch projects from backend, using defaults:", err);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchBackendProjects();
+
+    fetchProjects();
   }, []);
 
-  // Escape key closes modal
+  /* =========================================================
+     DISPLAYED PROJECTS
+  ========================================================= */
+  const displayedProjects = showMore
+    ? [...mainProjects, ...moreProjects]
+    : mainProjects;
+
+  /* =========================================================
+     CLOSE MODAL & ESCAPE LISTENER
+  ========================================================= */
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   useEffect(() => {
+    if (!selectedProject) return;
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
-        setSelectedProject(null);
-        setShowAllModal(false);
+        closeModal();
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
-  const featuredFour = allProjects.slice(0, 4);
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
 
   return (
-    <section className="vl-section vl-projects-section" id="projects" aria-label="Featured Projects">
-      <div className="vl-container">
-        {/* SECTION HEADER */}
-        <div className="vl-section-head">
-          <span className="vl-label">Projects</span>
-          <div className="vl-head-row">
-            <h2 className="vl-heading">
-              PROJECTS WE’RE <span className="vl-heading-muted">PROUD OF.</span>
-            </h2>
-            <p className="vl-head-desc">
-              A curated selection of digital products built around bold ideas, crafted through meticulous details, and made to live beyond the frame.
-            </p>
+    <>
+      {/* =====================================================
+          WORKS / PROJECTS SECTION
+      ====================================================== */}
+      <section className="vl-section vl-projects-section" id="projects" aria-label="Featured Projects">
+        <div className="vl-container">
+
+          {/* =================================================
+              CURRENT SECTION HEADER (PRESERVED EXACTLY AS REQUESTED)
+          ================================================== */}
+          <div className="vl-section-head">
+            <span className="vl-label">Projects</span>
+            <div className="vl-head-row">
+              <h2 className="vl-heading">
+                PROJECTS WE’RE <span className="vl-heading-muted">PROUD OF.</span>
+              </h2>
+              <p className="vl-head-desc">
+                A curated selection of digital products built around bold ideas, crafted through meticulous details, and made to live beyond the frame.
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* 2x2 FEATURED PROJECTS GRID */}
-        <div className="vl-projects-grid">
-          {featuredFour.map((project, idx) => {
-            const isLarge = idx === 0 || idx === 3;
-            return (
-              <div
-                key={project.id}
-                className={`vl-project-card ${isLarge ? "large" : "medium"}`}
-                onClick={() => setSelectedProject(project)}
-                role="button"
-                tabIndex={0}
-                aria-label={`View ${project.title}`}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedProject(project);
-                  }
-                }}
-              >
-                {/* BACKGROUND VIDEO PREVIEW */}
-                <div className="vl-card-media">
-                  <video
-                    src={project.video}
-                    poster={project.poster}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="vl-card-video"
-                  />
-                  <div className="vl-card-shade" />
-                </div>
+          {/* =================================================
+              PROJECT GRID (CLEAN 4-COLUMN VISUAL POSTER CARDS)
+          ================================================== */}
+          {displayedProjects.length > 0 ? (
+            <div className="works-grid">
+              {displayedProjects.map((project) => (
+                <article
+                  key={project.id}
+                  className="project-card"
+                  onClick={() => setSelectedProject(project)}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Open details for ${project.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setSelectedProject(project);
+                    }
+                  }}
+                >
+                  {/* PROJECT POSTER IMAGE */}
+                  <div className="project-image-wrapper">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-img"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = "/images/works(1).png";
+                      }}
+                    />
 
-                {/* VIEWFINDER CORNERS (ANIMATE ON HOVER) */}
-                <div className="vl-corner vl-corner-tl" />
-                <div className="vl-corner vl-corner-tr" />
-                <div className="vl-corner vl-corner-br" />
-                <div className="vl-corner vl-corner-bl" />
-
-                {/* CAMERA HUD OVERLAY */}
-                <div className="vl-hud">
-                  <div className="vl-hud-rec">
-                    <span className="vl-hud-dot" />
-                    <span className="vl-hud-rec-text">REC</span>
-                  </div>
-                  <div className="vl-hud-bottom">
-                    <div className="vl-hud-chips">
-                      <span className="vl-hud-chip">HD</span>
-                      <span className="vl-hud-chip">4K</span>
+                    {/* HOVER OVERLAY */}
+                    <div className="project-overlay">
+                      <span className="project-overlay-title">{project.title}</span>
+                      <span className="project-overlay-btn" aria-hidden="true">
+                        <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor">
+                          <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
+                        </svg>
+                      </span>
                     </div>
-                    <span className="vl-hud-time">00:0{idx + 1}:28</span>
                   </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            /* EMPTY / LOADING STATE */
+            <div className="works-empty-state">
+              {loading ? (
+                <div className="works-loading-wrap">
+                  <div className="works-spinner" aria-hidden="true" />
+                  <p>Loading projects...</p>
                 </div>
+              ) : (
+                <div className="works-empty-wrap">
+                  <p className="works-empty-title">No projects published yet.</p>
+                  <p className="works-empty-desc">Add your projects via the Admin Panel.</p>
+                </div>
+              )}
+            </div>
+          )}
 
-                {/* CARD CENTER: CLIENT BRAND / TITLE */}
-                <div className="vl-card-center">
-                  <span className="vl-card-client-tag">{project.client}</span>
-                  <h3 className="vl-card-title">{project.title}</h3>
-                  <div className="vl-card-view-btn">
-                    <span>View Project</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {/* =================================================
+              LOAD MORE BUTTON
+          ================================================== */}
+          {moreProjects.length > 0 && (
+            <div className="works-cta-container">
+              <button
+                type="button"
+                className="load-more-btn"
+                onClick={() => setShowMore((prev) => !prev)}
+                aria-label={showMore ? "Show fewer projects" : "Load more projects"}
+              >
+                <span>
+                  {showMore ? "Show Less" : `Load More (${moreProjects.length})`}
+                </span>
+              </button>
+            </div>
+          )}
+
         </div>
+      </section>
 
-        {/* BOTTOM ALL-PROJECTS TRIGGER */}
-        {allProjects.length > 4 && (
-          <div className="vl-projects-footer">
+      {/* =====================================================
+          CINEMATIC PROJECT DETAILS MODAL
+      ====================================================== */}
+      {selectedProject && (
+        <div
+          className="project-modal-backdrop"
+          onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selectedProject.title} project details`}
+        >
+          <div
+            className="project-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* CLOSE BUTTON */}
             <button
-              className="vl-btn-action"
-              onClick={() => setShowAllModal(true)}
+              type="button"
+              className="modal-close-btn"
+              onClick={closeModal}
+              aria-label="Close project details"
             >
-              <span>View All {allProjects.length} Projects</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
+              <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor">
+                <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z" />
               </svg>
             </button>
-          </div>
-        )}
-      </div>
 
-      {/* SINGLE PROJECT DETAIL MODAL */}
-      {selectedProject && (
-        <div className="vl-modal-backdrop" onClick={() => setSelectedProject(null)}>
-          <div className="vl-modal-dialog" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="vl-modal-close"
-              onClick={() => setSelectedProject(null)}
-              aria-label="Close modal"
-            >
-              ✕
-            </button>
-
-            <div className="vl-modal-video-wrap">
-              <video
-                src={selectedProject.video}
-                poster={selectedProject.poster}
-                autoPlay
-                loop
-                muted
-                controls
-                playsInline
-                className="vl-modal-video"
+            {/* MODAL IMAGE */}
+            <div className="modal-img-wrapper">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                onError={(e) => {
+                  e.currentTarget.src = "/images/works(1).png";
+                }}
               />
-              <div className="vl-corner vl-corner-tl" />
-              <div className="vl-corner vl-corner-tr" />
-              <div className="vl-corner vl-corner-br" />
-              <div className="vl-corner vl-corner-bl" />
             </div>
 
-            <div className="vl-modal-content">
-              <div className="vl-modal-meta">
-                <span className="vl-modal-category">{selectedProject.category}</span>
-                <span className="vl-modal-year">{selectedProject.year}</span>
+            {/* MODAL DETAILS */}
+            <div className="modal-details">
+              {/* TAGS + YEAR */}
+              <div className="modal-tags">
+                {selectedProject.tags &&
+                  selectedProject.tags.map((tag, index) => (
+                    <span key={`${tag}-${index}`} className="modal-tag">
+                      {tag}
+                    </span>
+                  ))}
+
+                {selectedProject.year && (
+                  <span className="modal-year">{selectedProject.year}</span>
+                )}
               </div>
 
-              <h2 className="vl-modal-title">{selectedProject.title}</h2>
-              <span className="vl-modal-client">Client: {selectedProject.client}</span>
+              {/* TITLE */}
+              <h2 className="modal-title">{selectedProject.title}</h2>
 
-              <p className="vl-modal-desc">{selectedProject.description}</p>
+              {/* CATEGORY */}
+              <p className="modal-category">{selectedProject.category}</p>
 
-              <div className="vl-modal-tags">
-                {selectedProject.tags.map((tag) => (
-                  <span key={tag} className="vl-hud-chip">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              {/* DESCRIPTION */}
+              <p className="modal-desc">{selectedProject.description}</p>
 
-              <div className="vl-modal-actions">
-                {selectedProject.link && selectedProject.link !== "#" ? (
+              {/* ACTION BUTTONS */}
+              <div className="modal-actions">
+                <a
+                  href="#contact"
+                  className="modal-btn-primary"
+                  onClick={closeModal}
+                >
+                  <span>Discuss Project</span>
+                  <span className="modal-btn-arrow" aria-hidden="true">→</span>
+                </a>
+
+                {selectedProject.link && selectedProject.link !== "#" && (
                   <a
                     href={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="vl-btn-action"
+                    className="modal-btn-secondary"
                   >
-                    <span>Launch Live Site</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </a>
-                ) : (
-                  <a href="#contact" onClick={() => setSelectedProject(null)} className="vl-btn-action">
-                    <span>Commission Similar Project</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
+                    <span>Visit Live Site</span>
+                    <span className="modal-btn-arrow" aria-hidden="true">↗</span>
                   </a>
                 )}
               </div>
@@ -289,37 +383,6 @@ export default function Works() {
           </div>
         </div>
       )}
-
-      {/* ALL PROJECTS DRAWER / MODAL */}
-      {showAllModal && (
-        <div className="vl-modal-backdrop" onClick={() => setShowAllModal(false)}>
-          <div className="vl-modal-dialog vl-modal-all-projects" onClick={(e) => e.stopPropagation()}>
-            <div className="vl-modal-header">
-              <h2 className="vl-heading" style={{ fontSize: "36px" }}>Archive Portfolio</h2>
-              <button className="vl-modal-close" onClick={() => setShowAllModal(false)}>✕</button>
-            </div>
-            <div className="vl-all-projects-grid">
-              {allProjects.map((p) => (
-                <div
-                  key={p.id}
-                  className="vl-archive-item"
-                  onClick={() => {
-                    setShowAllModal(false);
-                    setSelectedProject(p);
-                  }}
-                >
-                  <img src={p.poster} alt={p.title} className="vl-archive-thumb" />
-                  <div className="vl-archive-info">
-                    <span className="vl-archive-client">{p.client}</span>
-                    <h4 className="vl-archive-title">{p.title}</h4>
-                    <span className="vl-archive-cat">{p.category}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
+    </>
   );
 }
