@@ -5,7 +5,7 @@
 .vl-footer {
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background-color: #000000;
+  background-color: #0f0f0f;
   padding: 120px var(--section-pad-x) 40px;
   position: relative;
   overflow: hidden;
