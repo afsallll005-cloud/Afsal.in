@@ -1,0 +1,119 @@
+.vl-faq-section {
+  position: relative;
+}
+
+.vl-faq-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.vl-faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.vl-faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.vl-faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+  gap: 24px;
+}
+
+.vl-faq-num {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--text-muted);
+  width: 40px;
+}
+
+.vl-faq-question {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.vl-faq-item.open .vl-faq-question {
+  color: var(--accent-neon);
+}
+
+.vl-faq-toggle-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vl-faq-toggle-line-h,
+.vl-faq-toggle-line-v {
+  position: absolute;
+  background-color: var(--text-primary);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vl-faq-toggle-line-h {
+  width: 18px;
+  height: 1.5px;
+}
+
+.vl-faq-toggle-line-v {
+  width: 1.5px;
+  height: 18px;
+}
+
+.vl-faq-toggle-line-v.rotated {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+/* EXPANDABLE ANSWER */
+.vl-faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.vl-faq-content.expanded {
+  max-height: 300px;
+}
+
+.vl-faq-content-inner {
+  padding: 0 0 32px 64px;
+  max-width: 800px;
+}
+
+.vl-faq-answer {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  .vl-faq-trigger {
+    padding: 24px 0;
+  }
+  .vl-faq-question {
+    font-size: 19px;
+  }
+  .vl-faq-content-inner {
+    padding-left: 0;
+    padding-bottom: 24px;
+  }
+  .vl-faq-answer {
+    font-size: 15px;
+  }
+}

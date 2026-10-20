@@ -1,0 +1,89 @@
+.vl-everyframe-section {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.vl-everyframe-box {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  max-height: calc(100vh * 0.85);
+  background-color: var(--bg-card-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.vl-everyframe-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vl-everyframe-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vl-everyframe-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+}
+
+.vl-everyframe-title {
+  font-family: var(--font-display);
+  font-size: 58px;
+  line-height: 0.98em;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.vl-everyframe-sub {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-light);
+  max-width: 700px;
+}
+
+@media (max-width: 1024px) {
+  .vl-everyframe-box {
+    height: 500px;
+  }
+  .vl-everyframe-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vl-everyframe-box {
+    height: 420px;
+  }
+  .vl-everyframe-content {
+    padding: 24px;
+  }
+  .vl-everyframe-title {
+    font-size: 28px;
+  }
+  .vl-everyframe-sub {
+    font-size: 14px;
+  }
+}

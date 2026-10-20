@@ -1,0 +1,158 @@
+.vl-cta-section {
+  padding-bottom: 70px;
+}
+
+.vl-cta-box {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-color: var(--bg-card-dark);
+  overflow: hidden;
+  display: flex;
+}
+
+.vl-cta-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vl-cta-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vl-cta-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vl-cta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.vl-cta-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vl-cta-logo-text {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.vl-cta-dash {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.vl-cta-subtext {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+.vl-cta-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.vl-cta-headline {
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #ffffff;
+  max-width: 540px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.vl-cta-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 420px;
+}
+
+.vl-cta-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.vl-cta-btn {
+  align-self: flex-start;
+  background: var(--text-primary);
+  color: #000000;
+  border-color: var(--text-primary);
+  font-weight: 600;
+}
+
+.vl-cta-btn:hover {
+  background: var(--accent-neon);
+  border-color: var(--accent-neon);
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .vl-cta-box {
+    height: 480px;
+  }
+  .vl-cta-headline {
+    font-size: 36px;
+  }
+  .vl-cta-bottom {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .vl-cta-box {
+    height: auto;
+    min-height: 520px;
+  }
+  .vl-cta-content {
+    padding: 24px;
+  }
+  .vl-cta-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .vl-cta-headline {
+    font-size: 28px;
+  }
+  .vl-cta-dash {
+    display: none;
+  }
+}

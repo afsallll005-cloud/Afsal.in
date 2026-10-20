@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* TASA Orbiter Font Face Definitions from Google Fonts */
+@font-face {
+  font-family: "TASA Orbiter";
+  src: url("https://fonts.gstatic.com/s/tasaorbiter/v2/3XF4Erw3860rsdSUVZx78hPcTvQoDGHxaFGfVH4C8pm095IuGcc.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TASA Orbiter";
+  src: url("https://fonts.gstatic.com/s/tasaorbiter/v2/3XF4Erw3860rsdSUVZx78hPcTvQoDGHxaFGfVEwC8pm095IuGcc.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TASA Orbiter";
+  src: url("https://fonts.gstatic.com/s/tasaorbiter/v2/3XF4Erw3860rsdSUVZx78hPcTvQoDGHxaFGfVKAF8pm095IuGcc.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "TASA Orbiter";
+  src: url("https://fonts.gstatic.com/s/tasaorbiter/v2/3XF4Erw3860rsdSUVZx78hPcTvQoDGHxaFGfVJkF8pm095IuGcc.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "TASA Orbiter";
+  src: url("https://fonts.gstatic.com/s/tasaorbiter/v2/3XF4Erw3860rsdSUVZx78hPcTvQoDGHxaFGfVP4F8pm095IuGcc.woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
+:root {
+  /* Core Palette Tokens matching VideoLab reference */
+  --bg-primary: #0f0f0f;
+  --bg-surface: #141414;
+  --bg-card: #1c1c1c;
+  --bg-card-dark: #151515;
+  --bg-hud: rgba(0, 0, 0, 0.55);
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #8a8a8a;
+  --text-light: #d7d7d7;
+
+  --accent-neon: #d8f709;
+  --accent-red: #e00008;
+  --accent-amber: #f5a623;
+
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-chip: rgba(255, 255, 255, 0.3);
+  --border-active: rgba(255, 255, 255, 0.6);
+  --border-focus: #ffffff;
+
+  --nav-bg: rgba(15, 15, 15, 0.85);
+
+  --font-display: "TASA Orbiter", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --max-width: 1300px;
+  --section-pad-x: 70px;
+  --section-pad-y: 70px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  :root {
+    --section-pad-x: 40px;
+    --section-pad-y: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-pad-x: 20px;
+    --section-pad-y: 50px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent-neon);
+  color: #000000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #282828;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* VideoLab Section Utilities */
+.vl-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--section-pad-y) var(--section-pad-x);
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.vl-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Section Header Motif */
+.vl-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.vl-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0em;
+}
+
+.vl-head-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.vl-heading {
+  flex: 1 0 0;
+  font-size: 70px;
+  line-height: 0.95em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.vl-heading-muted {
+  color: var(--text-muted);
+}
+
+.vl-head-desc {
+  width: 474px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .vl-heading {
+    font-size: 52px;
+  }
+  .vl-head-desc {
+    width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .vl-head-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .vl-heading {
+    font-size: 38px;
+    line-height: 1em;
+  }
+  .vl-head-desc {
+    width: 100%;
+    font-size: 15px;
+  }
+  .vl-section-head {
+    margin-bottom: 40px;
+  }
+}
+
+/* Camera HUD Elements & Viewfinder Corners */
+.vl-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 4;
+  border-color: var(--border-focus);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.vl-corner-tl {
+  top: 0;
+  left: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.vl-corner-tr {
+  top: 0;
+  right: 0;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+.vl-corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+.vl-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+/* On card hover, pull corners slightly inward */
+.vl-viewfinder-box:hover .vl-corner-tl {
+  top: 10px;
+  left: 10px;
+}
+.vl-viewfinder-box:hover .vl-corner-tr {
+  top: 10px;
+  right: 10px;
+}
+.vl-viewfinder-box:hover .vl-corner-br {
+  bottom: 10px;
+  right: 10px;
+}
+.vl-viewfinder-box:hover .vl-corner-bl {
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Camera HUD Overlay */
+.vl-hud {
+  position: absolute;
+  inset: 20px 24px;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vl-hud-rec {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vl-hud-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-red);
+  border-radius: 50%;
+  animation: vlPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes vlPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+}
+
+.vl-hud-rec-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-red);
+  letter-spacing: 0.05em;
+}
+
+.vl-hud-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.vl-hud-chips {
+  display: flex;
+  gap: 8px;
+}
+
+.vl-hud-chip {
+  padding: 2px 9px;
+  border: 1px solid var(--border-chip);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.vl-hud-time {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+}
+
+/* Cinematic Video Overlay Gradients */
+.vl-video-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+/* Button & Pill Styles */
+.vl-btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border: 1px solid var(--border-chip);
+  border-radius: 0px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+.vl-btn-action:hover {
+  background: var(--text-primary);
+  color: #000000;
+  border-color: var(--text-primary);
+}
+
+.vl-btn-action svg {
+  transition: transform 0.3s ease;
+}
+
+.vl-btn-action:hover svg {
+  transform: translate(3px, -3px);
+}

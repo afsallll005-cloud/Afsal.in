@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+/* ==========================================================
+   FORMA STUDIO / MOHAMMED AFSAL HERO SECTION
+   MODERN CYBERPUNK MINIMALIST AESTHETIC
+   ========================================================== */
+
+.forma-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  max-height: 1200px;
+  background-color: #000000;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ----------------------------------------------------------
+   3D CYBORG BUST WITH ORANGE VISOR BACKGROUND LAYER
+   ---------------------------------------------------------- */
+.forma-media-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.forma-image-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.forma-hero-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.forma-bust-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  transform: scale(1.02);
+  transform-origin: center 24%;
+  filter: contrast(1.06) brightness(1.02);
+  transition: transform 0.6s ease;
+}
+
+/* VIBRANT ORANGE AMBIENT VISOR GLOW */
+.forma-visor-glow {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 580px;
+  height: 300px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 106, 0, 0.35) 0%,
+    rgba(255, 68, 0, 0.14) 42%,
+    rgba(0, 0, 0, 0) 72%
+  );
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 2;
+  animation: formaPulseGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes formaPulseGlow {
+  0% {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.04);
+  }
+}
+
+/* STUDIO SHADOW VIGNETTES */
+.forma-vignette-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.forma-vignette-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48%;
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.95) 25%,
+    rgba(0, 0, 0, 0.45) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.forma-vignette-sides {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 25%,
+    transparent 36%,
+    rgba(0, 0, 0, 0.5) 72%,
+    #000000 95%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------
+   DESKTOP FLOATING CROSSHAIR SERVICES GRID (ACROSS LOWER JAW/NECK)
+   ---------------------------------------------------------- */
+.forma-crosshair-container {
+  position: absolute;
+  top: 36%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 4;
+  padding: 0 56px;
+  pointer-events: auto;
+}
+
+.forma-crosshair-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+}
+
+.forma-chip {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  cursor: default;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.forma-chip:hover {
+  color: #ff7700;
+  transform: translateY(-1px);
+}
+
+.forma-cross {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  user-select: none;
+}
+
+/* ----------------------------------------------------------
+   DESKTOP STAGGERED LAYOUT (MATCHING IMAGE 1)
+   ---------------------------------------------------------- */
+.forma-desktop-view {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 64px 60px;
+  pointer-events: none;
+}
+
+.forma-desktop-inner {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  pointer-events: none;
+}
+
+/* TOP ROW: MOHAMMED */
+.forma-top-segment {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.forma-brand-primary {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(66px, 9.4vw, 152px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.86;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  pointer-events: auto;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.85);
+}
+
+/* BOTTOM SEGMENT: SUBTITLE (LEFT) & AFSAL + CTA BUTTON (RIGHT) */
+.forma-bottom-segment {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 32px;
+}
+
+.forma-bottom-left {
+  width: 320px;
+  max-width: 35%;
+  margin-bottom: 8px;
+}
+
+.forma-lead-text {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.48;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  pointer-events: auto;
+}
+
+/* BOTTOM RIGHT */
+.forma-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.forma-cta-wrapper {
+  margin-bottom: 4px;
+}
+
+/* PILL BUTTON: "(->) Contact with us" */
+.forma-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 22px 5px 5px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.forma-contact-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: #f5f5f7;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.forma-contact-pill:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.forma-pill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.forma-contact-pill:hover .forma-pill-icon {
+  transform: translateX(3px);
+}
+
+/* AFSAL VPR */
+.forma-brand-secondary-wrap {
+  display: inline-flex;
+  align-items: flex-start;
+  line-height: 0.86;
+  margin: 0;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.85);
+}
+
+.forma-brand-secondary {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(76px, 11vw, 168px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.forma-trademark {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(22px, 2.8vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 6px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* ----------------------------------------------------------
+   MOBILE VIEWPORT (HIDDEN ON DESKTOP)
+   ---------------------------------------------------------- */
+.forma-mobile-view {
+  display: none;
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE <= 860px)
+   MATCHING IMAGE 2 EXACTLY
+   ========================================================== */
+@media (max-width: 860px) {
+  .forma-hero {
+    height: 100svh;
+    min-height: 600px;
+    max-height: none;
+  }
+
+  .forma-bust-image {
+    object-position: center 16%;
+    transform: scale(1.02);
+    transform-origin: center 16%;
+  }
+
+  .forma-visor-glow {
+    top: 10%;
+    width: 380px;
+    height: 220px;
+  }
+
+  /* HIDE DESKTOP VIEWPORT */
+  .forma-desktop-view {
+    display: none !important;
+  }
+
+  /* SHOW MOBILE VIEWPORT */
+  .forma-mobile-view {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 24px 44px;
+    pointer-events: none;
+  }
+
+  .forma-mobile-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: auto;
+  }
+
+  /* MOBILE CROSSHAIRS ROW: POSITIONED DIRECTLY ABOVE HEADINGS */
+  .forma-mobile-crosshair-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .forma-mobile-crosshair-grid .forma-crosshair-row {
+    max-width: 100%;
+  }
+
+  .forma-chip {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .forma-cross {
+    font-size: 14px;
+  }
+
+  /* MOBILE HEADINGS: "Mohammed" (Title-Case Bold Sans) + "Afsal" (Italic Serif) */
+  .forma-mobile-headings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 0.88;
+    margin-bottom: 20px;
+  }
+
+  .forma-mobile-brand-main {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(44px, 12vw, 72px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    margin: 0;
+    text-transform: none;
+  }
+
+  .forma-mobile-brand-italic {
+    font-family: "Instrument Serif", "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(62px, 17vw, 94px);
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin-left: clamp(35px, 15vw, 100px);
+    margin-top: -12px;
+    line-height: 0.86;
+    text-transform: none;
+  }
+
+  /* SUBTITLE ON MOBILE */
+  .forma-mobile-lead-text {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 0 28px 0;
+    max-width: 320px;
+  }
+
+  /* CENTERED CTA PILL ON MOBILE */
+  .forma-mobile-cta-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .forma-contact-pill--mobile {
+    padding: 6px 26px 6px 6px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .forma-contact-pill--mobile .forma-pill-label {
+    font-size: 15px;
+  }
+}
+
+/* SMALL MOBILE SCREENS */
+@media (max-width: 480px) {
+  .forma-mobile-view {
+    padding: 0 20px 36px;
+  }
+
+  .forma-mobile-crosshair-grid {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .forma-chip {
+    font-size: 12px;
+  }
+
+  .forma-mobile-brand-main {
+    font-size: 44px;
+  }
+
+  .forma-mobile-brand-italic {
+    font-size: 64px;
+    margin-left: 40px;
+  }
+
+  .forma-mobile-lead-text {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}

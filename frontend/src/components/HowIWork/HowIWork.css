@@ -1,0 +1,148 @@
+.vl-process-section {
+  position: relative;
+  overflow: visible;
+}
+
+.vl-process-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.vl-process-card {
+  position: sticky;
+  top: var(--stack-top, 120px);
+  width: 100%;
+  height: 600px;
+  background-color: #121212;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+/* MEDIA LAYER */
+.vl-process-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.vl-process-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vl-process-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.15) 35%,
+    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* CARD TOP */
+.vl-process-head {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vl-process-num {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.vl-process-tag {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* CARD FOOTER */
+.vl-process-foot {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.vl-process-headline {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: none;
+  max-width: 380px;
+  line-height: 1.15;
+}
+
+.vl-process-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+  max-width: 520px;
+}
+
+/* RESPONSIVE STACKING CARDS */
+@media (max-width: 1024px) {
+  .vl-process-card {
+    height: 520px;
+    padding: 30px;
+  }
+  .vl-process-tag {
+    font-size: 28px;
+  }
+  .vl-process-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .vl-process-headline {
+    font-size: 28px;
+  }
+  .vl-process-desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vl-process-card {
+    height: 460px;
+    padding: 24px;
+  }
+  .vl-process-tag {
+    font-size: 22px;
+  }
+  .vl-process-headline {
+    font-size: 22px;
+  }
+  .vl-process-desc {
+    font-size: 14px;
+  }
+}
