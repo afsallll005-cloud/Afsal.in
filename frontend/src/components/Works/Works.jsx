@@ -134,9 +134,9 @@ const defaultProjects = [
     year: "2026",
     tags: ["Html", "Css", "Javascript"],
     description:
-      "A modern fashion e-commerce website developed to showcase contemporary clothing through an elegant and visually engaging digital storefront. Ziora focuses on presenting collections with clean product layouts, stylish imagery, and intuitive navigation. The platform combines responsive design, modern UI components, and a streamlined shopping experience to create a fashion-focused website that reflects the brand's identity while making it easy for customers to explore different styles and collections.",
-      image: "./images/Project07.jpeg",
-    link: "https://afsallll005-cloud.github.io/zioraFashion/",
+      "UCare is a hospital management application designed to streamline healthcare operations, manage hospital workflows, and support administrators, doctors, and receptionists through secure authentication and role-based access control.",
+      image: "./images/Project11.png",
+    link: "",
   },
   {
     id: "p12",
@@ -145,9 +145,9 @@ const defaultProjects = [
     year: "2026",
     tags: ["React", "Express", "Node.js", "MongoDB"],
     description:
-      "A premium fragrance e-commerce website created to present perfumes through a refined and elegant digital shopping experience. Ziora Perfumes combines sophisticated visual styling, carefully arranged product displays, and a clean interface to communicate the character of a luxury fragrance brand. The website emphasizes product presentation, intuitive navigation, and responsive layouts to help customers explore fragrances in a polished and engaging online environment.",
-      image: "./images/Project08.jpeg",
-    link: "",
+      "Ezuca is an online education platform designed to make learning accessible and engaging. It provides an intuitive interface for exploring courses, accessing educational resources, and enhancing learning experiences through a modern, user-friendly design.",
+      image: "./images/Project12.png",
+    link: "https://ezuca.vercel.app/",
   },
 ];
 
