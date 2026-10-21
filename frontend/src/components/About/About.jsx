@@ -64,6 +64,10 @@ export default function About() {
     name: "Mohammed Afsal",
     tagline: "We don’t just write code. We engineer scalable digital solutions.",
     bio: "I am a Full-Stack Software Developer & Web Engineer based in Malappuram, Kerala. Focused on crafting robust, production-grade web applications using modern technologies including Next.js, React, Node.js, Express, and MongoDB. From system architecture to frontend performance, I build clean, testable, and maintainable software that solves real business challenges.",
+    resumeText: "Download CV",
+    resumeFile: "/images/MohammedAfsal_Fullstack_Developer.pdf",
+    resumeFileName: "MohammedAfsal_Fullstack_Developer.pdf",
+    resumeLink: "",
   });
 
   useEffect(() => {
@@ -77,6 +81,10 @@ export default function About() {
               ...prev,
               name: data.heading || prev.name,
               bio: data.paragraph1 || prev.bio,
+              resumeText: data.resumeText || prev.resumeText,
+              resumeFile: data.resumeFile || prev.resumeFile,
+              resumeFileName: data.resumeFileName || prev.resumeFileName,
+              resumeLink: data.resumeLink || prev.resumeLink,
             }));
           }
         }
@@ -86,6 +94,16 @@ export default function About() {
     };
     fetchAbout();
   }, []);
+
+  // Determine active CV destination (uploaded file -> external URL -> public default PDF)
+  const cvHref =
+    aboutData.resumeFile ||
+    (aboutData.resumeLink && aboutData.resumeLink !== "#contact" && !aboutData.resumeLink.startsWith("#")
+      ? aboutData.resumeLink
+      : "/images/MohammedAfsal_Fullstack_Developer.pdf");
+
+  const isExternalLink =
+    cvHref.startsWith("http://") || cvHref.startsWith("https://");
 
   return (
     <section className="vl-section vl-about-section" id="about" aria-label="About Mohammed Afsal">
@@ -105,8 +123,15 @@ export default function About() {
                 <h3 className="vl-about-impact-quote">{aboutData.tagline}</h3>
                 <p className="vl-about-bio">{aboutData.bio}</p>
                 <div className="vl-about-links">
-                  <a href="#projects" className="vl-btn-action">
-                    <span>Download CV</span>
+                  <a
+                    href={cvHref}
+                    download={!isExternalLink ? (aboutData.resumeFileName || "MohammedAfsal_Fullstack_Developer.pdf") : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vl-btn-action"
+                    aria-label="Download CV"
+                  >
+                    <span>{aboutData.resumeText || "Download CV"}</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>

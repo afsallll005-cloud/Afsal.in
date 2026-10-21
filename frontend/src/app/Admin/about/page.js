@@ -668,8 +668,8 @@ export default function AboutAdmin() {
 
                       <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
                         <a
-                          href={formData.resumeFile}
-                          download={formData.resumeFileName || "Resume.pdf"}
+                          href={formData.resumeFile || "/images/MohammedAfsal_Fullstack_Developer.pdf"}
+                          download={formData.resumeFileName || "MohammedAfsal_Fullstack_Developer.pdf"}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn-secondary"

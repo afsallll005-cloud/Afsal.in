@@ -97,6 +97,24 @@ export default function Navbar() {
                 afsallll005@gmail.com
               </a>
               <span className="vl-drawer-contact-location">Malappuram, Kerala, India</span>
+              <a
+                href="/images/MohammedAfsal_Fullstack_Developer.pdf"
+                download="MohammedAfsal_Fullstack_Developer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  marginTop: "8px",
+                  fontSize: "12px",
+                  color: "var(--accent-neon, #d8f709)",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                }}
+              >
+                <span>Download CV (PDF) ↗</span>
+              </a>
             </div>
             <div className="vl-drawer-socials">
               <a href="https://github.com/afsallll005-cloud" target="_blank" rel="noopener noreferrer">GitHub</a>

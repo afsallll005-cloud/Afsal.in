@@ -22,19 +22,19 @@ const aboutSchema = new mongoose.Schema(
     },
     resumeText: {
       type: String,
-      default: 'View Resume',
+      default: 'Download CV',
     },
     resumeLink: {
       type: String,
-      default: '#contact',
+      default: '',
     },
     resumeFile: {
       type: String,
-      default: '',
+      default: '/images/MohammedAfsal_Fullstack_Developer.pdf',
     },
     resumeFileName: {
       type: String,
-      default: '',
+      default: 'MohammedAfsal_Fullstack_Developer.pdf',
     },
     linkedinUrl: {
       type: String,

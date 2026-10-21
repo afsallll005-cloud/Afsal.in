@@ -14,6 +14,7 @@ import {
   FiExternalLink,
   FiRefreshCw,
   FiAlertCircle,
+  FiFileText,
 } from "react-icons/fi";
 import { API_BASE_URL } from "@/utils/api";
 
@@ -252,6 +253,16 @@ export default function AdminDashboard() {
             <div className="quick-action-text">
               <h4>Edit About Section</h4>
               <p>Update bio, portrait & socials</p>
+            </div>
+          </Link>
+
+          <Link href="/Admin/resume" className="quick-action-card">
+            <div className="quick-action-icon">
+              <FiFileText />
+            </div>
+            <div className="quick-action-text">
+              <h4>CV & Resume File</h4>
+              <p>Upload or update your portfolio CV (PDF)</p>
             </div>
           </Link>
 

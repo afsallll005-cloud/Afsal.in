@@ -1,0 +1,563 @@
+/* =========================================================
+   CONTACT INQUIRY MODAL (FULL EXPERIENCE)
+   Cinematic Dark Aesthetic matching Mohammed Afsal Portfolio
+========================================================= */
+
+.cm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 20px;
+  background-color: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  overflow-y: auto;
+  animation: cmBackdropFade 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cmBackdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   DIALOG CARD
+========================================================= */
+
+.cm-dialog {
+  width: 100%;
+  max-width: 660px;
+  background: #101216;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 42px 46px;
+  position: relative;
+  box-shadow:
+    0 32px 80px -16px rgba(0, 0, 0, 0.95),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: cmModalEnter 0.36s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes cmModalEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Custom Scrollbar for Modal Dialog */
+.cm-dialog::-webkit-scrollbar {
+  width: 6px;
+}
+.cm-dialog::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cm-dialog::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+.cm-dialog::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.cm-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cm-close-btn:hover {
+  background: rgba(216, 247, 9, 0.15);
+  border-color: var(--accent-neon, #d8f709);
+  color: var(--accent-neon, #d8f709);
+  transform: rotate(90deg) scale(1.05);
+}
+
+/* =========================================================
+   HEADER SECTION
+========================================================= */
+
+.cm-head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-right: 40px;
+}
+
+.cm-hud-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: rgba(216, 247, 9, 0.08);
+  border: 1px solid rgba(216, 247, 9, 0.25);
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.cm-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-neon, #d8f709);
+  box-shadow: 0 0 8px var(--accent-neon, #d8f709);
+  animation: cmPulse 2s infinite ease-in-out;
+}
+
+@keyframes cmPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+.cm-status-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-neon, #d8f709);
+  text-transform: uppercase;
+}
+
+.cm-title {
+  font-family: var(--font-display, "TASA Orbiter", sans-serif);
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 700;
+  line-height: 1.08;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cm-title-muted {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cm-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+/* =========================================================
+   QUICK DIRECT CONTACT LINKS
+========================================================= */
+
+.cm-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.cm-quick-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.cm-quick-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--accent-neon, #d8f709);
+}
+
+.cm-copy-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(216, 247, 9, 0.15);
+  color: var(--accent-neon, #d8f709);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cm-location-pill {
+  cursor: default;
+  color: rgba(255, 255, 255, 0.6);
+}
+.cm-location-pill:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================================
+   FORM STYLES
+========================================================= */
+
+.cm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.cm-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+.cm-optional {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cm-required {
+  color: var(--accent-neon, #d8f709);
+}
+
+/* SERVICES SELECTION CHIPS */
+.cm-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cm-service-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 12.5px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.cm-service-chip:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cm-service-chip.selected {
+  background: rgba(216, 247, 9, 0.12);
+  border-color: var(--accent-neon, #d8f709);
+  color: var(--accent-neon, #d8f709);
+}
+
+.cm-chip-icon {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ROW 2 DUAL INPUTS */
+.cm-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* INPUTS & TEXTAREA */
+.cm-input,
+.cm-textarea {
+  width: 100%;
+  background: #16191f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 13px 16px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 14.5px;
+  color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cm-input::placeholder,
+.cm-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.cm-input:focus,
+.cm-textarea:focus {
+  background: #1a1e26;
+  border-color: var(--accent-neon, #d8f709);
+  box-shadow: 0 0 0 3px rgba(216, 247, 9, 0.12);
+}
+
+.cm-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   ACTION BUTTONS & SUBMISSION
+========================================================= */
+
+.cm-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.cm-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--accent-neon, #d8f709);
+  color: #000000;
+  border: 1px solid var(--accent-neon, #d8f709);
+  border-radius: 6px;
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(216, 247, 9, 0.25);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.cm-btn-primary:hover:not(:disabled) {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+}
+
+.cm-btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cm-privacy-note {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+
+/* SPINNER */
+.cm-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-top-color: #000000;
+  border-radius: 50%;
+  animation: cmSpin 0.7s linear infinite;
+}
+
+@keyframes cmSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ERROR ALERT */
+.cm-error-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 6px;
+  color: #fca5a5;
+  font-size: 13.5px;
+}
+
+/* =========================================================
+   SUCCESS STATE SCREEN
+========================================================= */
+
+.cm-success-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 20px 24px;
+  gap: 16px;
+  animation: cmModalEnter 0.4s ease;
+}
+
+.cm-success-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(216, 247, 9, 0.15);
+  border: 1px solid var(--accent-neon, #d8f709);
+  color: var(--accent-neon, #d8f709);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 32px rgba(216, 247, 9, 0.3);
+}
+
+.cm-success-title {
+  font-family: var(--font-display, "TASA Orbiter", sans-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.cm-success-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 440px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+========================================================= */
+
+@media (max-width: 768px) {
+  .cm-backdrop {
+    padding: 14px;
+    align-items: flex-end;
+  }
+
+  .cm-dialog {
+    padding: 32px 24px;
+    border-radius: 14px 14px 0 0;
+    max-height: 94vh;
+  }
+
+  .cm-close-btn {
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .cm-head {
+    padding-right: 32px;
+  }
+
+  .cm-row-2 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cm-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .cm-btn-primary {
+    width: 100%;
+    height: 48px;
+  }
+
+  .cm-privacy-note {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cm-dialog {
+    padding: 24px 18px;
+  }
+
+  .cm-title {
+    font-size: 24px;
+  }
+
+  .cm-services-grid {
+    gap: 6px;
+  }
+
+  .cm-service-chip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

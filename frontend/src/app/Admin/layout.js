@@ -14,6 +14,7 @@ import {
   FiMenu,
   FiX,
   FiShield,
+  FiFileText,
 } from "react-icons/fi";
 import "./admin.css";
 
@@ -55,6 +56,7 @@ export default function AdminLayout({ children }) {
     { name: "Projects", href: "/Admin/projects", icon: <FiBriefcase /> },
     { name: "Hero Section", href: "/Admin/hero", icon: <FiStar /> },
     { name: "About", href: "/Admin/about", icon: <FiUser /> },
+    { name: "CV / Resume", href: "/Admin/resume", icon: <FiFileText /> },
     { name: "Skills", href: "/Admin/skills", icon: <FiZap /> },
     { name: "Contacts", href: "/Admin/contacts", icon: <FiMail /> },
   ];

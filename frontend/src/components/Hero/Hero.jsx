@@ -121,7 +121,7 @@ export default function Hero({
       <div className="forma-mobile-view">
         <div className="forma-mobile-inner">
           {/* MOBILE CROSSHAIRS ROW */}
-          <div className="forma-mobile-crosshair-grid">
+          {/* <div className="forma-mobile-crosshair-grid">
             <div className="forma-crosshair-row forma-crosshair-row-1">
               <span className="forma-chip">Branding</span>
               <span className="forma-cross" aria-hidden="true">+</span>
@@ -136,11 +136,11 @@ export default function Hero({
               <span className="forma-chip">App Design</span>
               <span className="forma-cross" aria-hidden="true">+</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="forma-mobile-headings">
             <h1 className="forma-mobile-brand-main">Mohammed</h1>
-            <span className="forma-mobile-brand-italic">Afsal</span>
+            <span className="forma-mobile-brand-italic">Afsal t</span>
           </div>
 
           <p className="forma-mobile-lead-text">

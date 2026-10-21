@@ -13,6 +13,7 @@ import HowIWork from "@/components/HowIWork/HowIWork";
 import FAQ from "@/components/FAQ/FAQ";
 import CTABanner from "@/components/CTABanner/CTABanner";
 import Footer from "@/components/Footer/Footer";
+import ContactModal from "@/components/ContactModal/ContactModal";
 import "./Home.css";
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
       <Navbar />
       <Hero onOpenContact={() => setContactModalOpen(true)} />
       <About />
-      <Works />
+      <Works onOpenContact={() => setContactModalOpen(true)} />
       <Services />
       {/* <Testimonials /> */}
       <Brands />
@@ -31,9 +32,12 @@ export default function Home() {
       {/* <HowIWork /> */}
       <FAQ />
       <CTABanner onOpenContact={() => setContactModalOpen(true)} />
-      <Footer
-        contactModalOpen={contactModalOpen}
-        setContactModalOpen={setContactModalOpen}
+      <Footer onOpenContact={() => setContactModalOpen(true)} />
+
+      {/* FULL EXPERIENCE CONTACT INQUIRY MODAL */}
+      <ContactModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
       />
     </main>
   );

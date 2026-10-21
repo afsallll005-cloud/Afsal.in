@@ -27,6 +27,18 @@ const nextConfig = {
         destination: "/images/logo.png",
       },
       {
+        source: "/Mohammed_Afsal_CV.pdf",
+        destination: "/images/MohammedAfsal_Fullstack_Developer.pdf",
+      },
+      {
+        source: "/cv",
+        destination: "/images/MohammedAfsal_Fullstack_Developer.pdf",
+      },
+      {
+        source: "/resume",
+        destination: "/images/MohammedAfsal_Fullstack_Developer.pdf",
+      },
+      {
         source: "/api/:path*",
         destination: "https://portfolio-nu-ten-27.vercel.app/api/:path*",
       },

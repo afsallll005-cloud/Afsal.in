@@ -1,65 +1,11 @@
-"use client";
-
-import { useState } from "react";
-import { API_BASE_URL } from "@/utils/api";
 import "./Footer.css";
 
-export default function Footer({ contactModalOpen, setContactModalOpen }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [status, setStatus] = useState({ loading: false, success: false, error: "" });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      setStatus({ loading: false, success: false, error: "Please fill out all fields." });
-      return;
-    }
-
-    setStatus({ loading: true, success: false, error: "" });
-
-    try {
-      const res = await fetch(`${API_BASE_URL}/contacts`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        setStatus({ loading: false, success: true, error: "" });
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => {
-          if (setContactModalOpen) setContactModalOpen(false);
-          setStatus({ loading: false, success: false, error: "" });
-        }, 2500);
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setStatus({
-          loading: false,
-          success: false,
-          error: data.message || "Failed to submit. Please try again.",
-        });
-      }
-    } catch (err) {
-      console.warn("Contact submission error:", err);
-      setStatus({
-        loading: false,
-        success: true,
-        error: "",
-      });
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => {
-        if (setContactModalOpen) setContactModalOpen(false);
-        setStatus({ loading: false, success: false, error: "" });
-      }, 2500);
+export default function Footer({ onOpenContact, setContactModalOpen }) {
+  const handleOpenContact = () => {
+    if (onOpenContact) {
+      onOpenContact();
+    } else if (setContactModalOpen) {
+      setContactModalOpen(true);
     }
   };
 
@@ -114,7 +60,7 @@ export default function Footer({ contactModalOpen, setContactModalOpen }) {
             <button
               type="button"
               className="vl-talk-btn"
-              onClick={() => setContactModalOpen(true)}
+              onClick={handleOpenContact}
               aria-label="Let's Talk - Open contact form"
             >
               <div className="vl-talk-row">
@@ -150,96 +96,6 @@ export default function Footer({ contactModalOpen, setContactModalOpen }) {
           </div>
         </div>
       </div>
-
-      {/* INTERACTIVE CONTACT INQUIRY MODAL */}
-      {contactModalOpen && (
-        <div className="vl-modal-backdrop" onClick={() => setContactModalOpen(false)}>
-          <div className="vl-modal-dialog vl-contact-dialog" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="vl-modal-close"
-              onClick={() => setContactModalOpen(false)}
-              aria-label="Close modal"
-            >
-              ✕
-            </button>
-
-            <div className="vl-contact-modal-head">
-              <span className="vl-label" style={{ color: "var(--accent-neon)" }}>
-                Start a Conversation
-              </span>
-              <h2 className="vl-contact-modal-title">LET’S WORK TOGETHER.</h2>
-              <p className="vl-contact-modal-desc">
-                Tell me about your project, target launch dates, and goals. I respond within 24 hours.
-              </p>
-            </div>
-
-            {status.success ? (
-              <div className="vl-contact-success">
-                <div className="vl-success-icon">✓</div>
-                <h3>Message Received!</h3>
-                <p>Thank you for reaching out. I’ll review your details and be in touch shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="vl-contact-form">
-                {status.error && <div className="vl-form-error">{status.error}</div>}
-
-                <div className="vl-form-group">
-                  <label htmlFor="name" className="vl-form-label">YOUR NAME</label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Marcus Reed"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="vl-form-input"
-                  />
-                </div>
-
-                <div className="vl-form-group">
-                  <label htmlFor="email" className="vl-form-label">EMAIL ADDRESS</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="marcus@studiolink.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="vl-form-input"
-                  />
-                </div>
-
-                <div className="vl-form-group">
-                  <label htmlFor="message" className="vl-form-label">PROJECT DETAILS & SCOPE</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    required
-                    placeholder="We're building a new web platform with interactive storytelling and need full-stack design and engineering..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="vl-form-textarea"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status.loading}
-                  className="vl-btn-action vl-submit-btn"
-                >
-                  <span>{status.loading ? "Sending..." : "Submit Inquiry"}</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
-                  </svg>
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
     </footer>
   );
 }

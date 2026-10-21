@@ -113,23 +113,23 @@ const defaultProjects = [
     tags: [ "React", "Express"],
     description:
       "A modern architecture website designed to showcase innovative architectural concepts, residential projects, and contemporary design solutions. The platform combines elegant layouts, high-quality visuals, and carefully structured content to create an immersive browsing experience. With a focus on clean aesthetics, responsive design, and intuitive navigation, Architype presents architectural creativity through a sophisticated digital presence that works seamlessly across desktop, tablet, and mobile devices.",
-      image: "./images/Project05.jpeg",
+      image: "./images/Project09.jpeg",
     link: "",
   },
   {
     id: "p10",
-    title: "ERP",
+    title: "ERP Software",
     category: "Saas Application",
     year: "2025",
     tags: ["Next.js", "Express", "PostgrSQL", "Charts"],
     description:
       "A comprehensive Enterprise Resource Planning (ERP) system developed as part of a collaborative internship project. The platform is designed to simplify business operations by organizing inventory management, product tracking, and essential administrative workflows in one centralized system. My primary contribution focused on frontend development, creating responsive user interfaces, reusable components, and intuitive layouts to ensure a smooth and efficient user experience.",
-      image: "./images/Project06.jpeg",
+      image: "./images/Project10.png",
     link: "",
   },
   {
     id: "p11",
-    title: "Ziora",
+    title: "Hospital POS",
     category: "E-Commerce",
     year: "2026",
     tags: ["Html", "Css", "Javascript"],
@@ -140,7 +140,7 @@ const defaultProjects = [
   },
   {
     id: "p12",
-    title: "Ziora Perfumes",
+    title: "Ezuka Learning",
     category: "E-Commerce",
     year: "2026",
     tags: ["React", "Express", "Node.js", "MongoDB"],
@@ -153,7 +153,7 @@ const defaultProjects = [
 
 const INITIAL_PROJECT_COUNT = 8;
 
-export default function Works() {
+export default function Works({ onOpenContact }) {
   const [showMore, setShowMore] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [projects, setProjects] = useState(defaultProjects);
@@ -432,14 +432,17 @@ export default function Works() {
 
               {/* ACTION BUTTONS */}
               <div className="modal-actions">
-                <a
-                  href="#contact"
+                <button
+                  type="button"
                   className="modal-btn-primary"
-                  onClick={closeModal}
+                  onClick={() => {
+                    closeModal();
+                    if (onOpenContact) onOpenContact();
+                  }}
                 >
                   <span>Discuss Project</span>
                   <span className="modal-btn-arrow" aria-hidden="true">→</span>
-                </a>
+                </button>
 
                 {selectedProject.link && selectedProject.link !== "#" && (
                   <a
