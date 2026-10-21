@@ -135,7 +135,7 @@ const defaultProjects = [
     tags: ["Html", "Css", "Javascript"],
     description:
       "UCare is a hospital management application designed to streamline healthcare operations, manage hospital workflows, and support administrators, doctors, and receptionists through secure authentication and role-based access control.",
-      image: "./images/Project11.png",
+      image: "./images/Project12.png",
     link: "",
   },
   {
@@ -146,7 +146,7 @@ const defaultProjects = [
     tags: ["React", "Express", "Node.js", "MongoDB"],
     description:
       "Ezuca is an online education platform designed to make learning accessible and engaging. It provides an intuitive interface for exploring courses, accessing educational resources, and enhancing learning experiences through a modern, user-friendly design.",
-      image: "./images/Project12.png",
+      image: "./images/Project11.png",
     link: "https://ezuca.vercel.app/",
   },
 ];
