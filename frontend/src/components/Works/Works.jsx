@@ -61,16 +61,29 @@ const defaultProjects = [
     link: "https://digicam-sooty.vercel.app/",
   },
   {
-    id: "p6",
-    title: "Kinza",
-    category: "Static",
+    id: "p10",
+    title: "ERP Software",
+    category: "Saas Application",
     year: "2025",
-    tags: ["Next.js", "Express", "MongoDB", "Charts"],
+    tags: ["Next.js", "Express", "PostgrSQL", "Charts"],
     description:
-      "A vibrant beverage website designed to showcase refreshing drinks through colorful visuals, engaging product presentations, and a modern digital experience. Kinza focuses on creating a lively brand identity with attractive layouts, clear content hierarchy, and intuitive navigation. Its responsive interface ensures a consistent experience across different screen sizes while presenting beverage products in a visually appealing and accessible way.",
-      image: "./images/Project06.jpeg",
-    link: "",
+      "A comprehensive Enterprise Resource Planning (ERP) system developed as part of a collaborative internship project. The platform is designed to simplify business operations by organizing inventory management, product tracking, and essential administrative workflows in one centralized system. My primary contribution focused on frontend development, creating responsive user interfaces, reusable components, and intuitive layouts to ensure a smooth and efficient user experience.",
+      image: "./images/Project10.png",
+    link: "https://github.com/afsallll005-cloud/erp-intern.git",
   },
+
+   {
+    id: "p12",
+    title: "Ezuka Learning",
+    category: " Learning Platform",
+    year: "2026",
+    tags: ["React", "Express", "Node.js", "MongoDB"],
+    description:
+      "Ezuca is an online education platform designed to make learning accessible and engaging. It provides an intuitive interface for exploring courses, accessing educational resources, and enhancing learning experiences through a modern, user-friendly design.",
+      image: "./images/Project11.png",
+    link: "https://ezuca.vercel.app/",
+  },
+
   {
     id: "p7",
     title: "Ziora",
@@ -82,18 +95,7 @@ const defaultProjects = [
       image: "./images/Project07.jpeg",
     link: "https://afsallll005-cloud.github.io/zioraFashion/",
   },
-  {
-    id: "p8",
-    title: "Ziora Perfumes",
-    category: "E-Commerce",
-    year: "2026",
-    tags: ["React", "Express", "Node.js", "MongoDB"],
-    description:
-      "A premium fragrance e-commerce website created to present perfumes through a refined and elegant digital shopping experience. Ziora Perfumes combines sophisticated visual styling, carefully arranged product displays, and a clean interface to communicate the character of a luxury fragrance brand. The website emphasizes product presentation, intuitive navigation, and responsive layouts to help customers explore fragrances in a polished and engaging online environment.",
-      image: "./images/Project08.jpeg",
-    link: "",
-  },
-
+ 
 
 
 
@@ -116,17 +118,19 @@ const defaultProjects = [
       image: "./images/Project09.jpeg",
     link: "",
   },
+  
   {
-    id: "p10",
-    title: "ERP Software",
-    category: "Saas Application",
+    id: "p6",
+    title: "Kinza",
+    category: "Static",
     year: "2025",
-    tags: ["Next.js", "Express", "PostgrSQL", "Charts"],
+    tags: ["Next.js", "Express", "MongoDB", "Charts"],
     description:
-      "A comprehensive Enterprise Resource Planning (ERP) system developed as part of a collaborative internship project. The platform is designed to simplify business operations by organizing inventory management, product tracking, and essential administrative workflows in one centralized system. My primary contribution focused on frontend development, creating responsive user interfaces, reusable components, and intuitive layouts to ensure a smooth and efficient user experience.",
-      image: "./images/Project10.png",
+      "A vibrant beverage website designed to showcase refreshing drinks through colorful visuals, engaging product presentations, and a modern digital experience. Kinza focuses on creating a lively brand identity with attractive layouts, clear content hierarchy, and intuitive navigation. Its responsive interface ensures a consistent experience across different screen sizes while presenting beverage products in a visually appealing and accessible way.",
+      image: "./images/Project06.jpeg",
     link: "",
   },
+  
   {
     id: "p11",
     title: "Hospital POS",
@@ -138,17 +142,19 @@ const defaultProjects = [
       image: "./images/Project12.png",
     link: "",
   },
-  {
-    id: "p12",
-    title: "Ezuka Learning",
+   {
+    id: "p8",
+    title: "Ziora Perfumes",
     category: "E-Commerce",
     year: "2026",
     tags: ["React", "Express", "Node.js", "MongoDB"],
     description:
-      "Ezuca is an online education platform designed to make learning accessible and engaging. It provides an intuitive interface for exploring courses, accessing educational resources, and enhancing learning experiences through a modern, user-friendly design.",
-      image: "./images/Project11.png",
-    link: "https://ezuca.vercel.app/",
+      "A premium fragrance e-commerce website created to present perfumes through a refined and elegant digital shopping experience. Ziora Perfumes combines sophisticated visual styling, carefully arranged product displays, and a clean interface to communicate the character of a luxury fragrance brand. The website emphasizes product presentation, intuitive navigation, and responsive layouts to help customers explore fragrances in a polished and engaging online environment.",
+      image: "./images/Project08.jpeg",
+    link: "",
   },
+
+ 
 ];
 
 const INITIAL_PROJECT_COUNT = 8;
