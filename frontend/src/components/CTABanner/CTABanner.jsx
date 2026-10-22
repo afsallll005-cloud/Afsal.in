@@ -9,7 +9,7 @@ export default function CTABanner({ onOpenContact }) {
         <div className="vl-cta-box">
           {/* BACKGROUND AMBIENT IMAGE */}
           <img
-            src="https://framerusercontent.com/images/tMTA1vKtPMp9H2MVL1eQNaXYus.webp?width=1280&height=720"
+            src="./images/Banner.jpg"    
             alt="MHD Afsal CTA Background"
             className="vl-cta-img"
             loading="lazy"
