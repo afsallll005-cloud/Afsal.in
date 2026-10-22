@@ -8,7 +8,7 @@ const steps = [
   {
     number: "01",
     title: "Architect",
-    desc: "We analyze technical requirements, database schemas, API architecture, and user flows to establish a solid engineering roadmap.",
+    desc: "I analyze technical requirements, database schemas, API architecture, and user flows to establish a solid engineering roadmap.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="12" r="9" />
@@ -20,7 +20,7 @@ const steps = [
   {
     number: "02",
     title: "Develop",
-    desc: "We write clean, testable, and modular full-stack code using Next.js, React, Node.js, Express, and modern TypeScript.",
+    desc: "I write clean, testable, and modular full-stack code using Next.js, React, Node.js, Express, and modern TypeScript.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polyline points="16 18 22 12 16 6" />
@@ -32,7 +32,7 @@ const steps = [
   {
     number: "03",
     title: "Optimize",
-    desc: "We perform database indexing, Core Web Vitals speed tuning, API caching, and security hardening to ensure peak reliability.",
+    desc: "I perform database indexing, Core Web Vitals speed tuning, API caching, and security hardening to ensure peak reliability.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -43,7 +43,7 @@ const steps = [
   {
     number: "04",
     title: "Deploy",
-    desc: "We configure automated CI/CD workflows, containerization, and production cloud infrastructure on Vercel and Render.",
+    desc: "I configure automated CI/CD workflows, containerization, and production cloud infrastructure on Vercel and Render.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
@@ -62,7 +62,7 @@ const stats = [
 export default function About() {
   const [aboutData, setAboutData] = useState({
     name: "Mohammed Afsal",
-    tagline: "We don’t just write code. We engineer scalable digital solutions.",
+    tagline: "I don’t just write code. I engineer scalable digital solutions.",
     bio: "I am a Full-Stack Software Developer & Web Engineer based in Malappuram, Kerala. Focused on crafting robust, production-grade web applications using modern technologies including Next.js, React, Node.js, Express, and MongoDB. From system architecture to frontend performance, I build clean, testable, and maintainable software that solves real business challenges.",
     resumeText: "Download CV",
     resumeFile: "/images/MohammedAfsal_Fullstack_Developer.pdf",
@@ -116,7 +116,7 @@ export default function About() {
             {/* LEFT TEXT COLUMN */}
             <div className="vl-about-left">
               <h2 className="vl-about-heading">
-                ABOUT OUR <span className="vl-heading-muted">SOFTWARE CRAFT.</span>
+                ABOUT MY <span className="vl-heading-muted">SOFTWARE CRAFT.</span>
               </h2>
 
               <div className="vl-about-statement">

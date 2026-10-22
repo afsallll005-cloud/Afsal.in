@@ -87,17 +87,17 @@ export default function Services() {
   };
 
   return (
-    <section className="vl-section vl-services-section" id="services" aria-label="Services Offered">
+    <section className="vl-section vl-services-section" id="services" aria-label="My Services">
       <div className="vl-container">
         {/* SECTION HEADER */}
         <div className="vl-section-head">
           <span className="vl-label">Services</span>
           <div className="vl-head-row">
             <h2 className="vl-heading">
-              WE ENGINEER MORE <span className="vl-heading-muted">THAN WEBSITES.</span>
+              I ENGINEER MORE <span className="vl-heading-muted">THAN WEBSITES.</span>
             </h2>
             <p className="vl-head-desc">
-              From database modeling to frontend interactivity, we combine system architecture, full-stack programming, and clean code to build software that performs.
+              From database modeling to frontend interactivity, I combine system architecture, full-stack programming, and clean code to build software that performs.
             </p>
           </div>
         </div>

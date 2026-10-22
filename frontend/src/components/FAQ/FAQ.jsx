@@ -54,7 +54,7 @@ export default function FAQ() {
               FREQUENTLY <span className="vl-heading-muted">ASKED.</span>
             </h2>
             <p className="vl-head-desc">
-              Answers to common questions regarding our engineering standards, code ownership, tech stack, and deployment workflows.
+              Answers to common questions regarding my engineering standards, code ownership, tech stack, and deployment workflows.
             </p>
           </div>
         </div>

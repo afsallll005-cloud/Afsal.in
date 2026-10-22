@@ -273,7 +273,7 @@ export default function Works({ onOpenContact }) {
             <span className="vl-label">Projects</span>
             <div className="vl-head-row">
               <h2 className="vl-heading">
-                PROJECTS WE’RE <span className="vl-heading-muted">PROUD OF.</span>
+                DIGITAL EXPERIENCES<span className="vl-heading-muted"> I’VE BUILT.</span>
               </h2>
               <p className="vl-head-desc">
                 A curated selection of digital products built around bold ideas, crafted through meticulous details, and made to live beyond the frame.

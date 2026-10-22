@@ -7,7 +7,7 @@ const processCards = [
     num: "01",
     tag: "Architect",
     headline: "Define the foundation.",
-    desc: "We analyze system requirements, map out database schemas, design REST API specifications, and plan component hierarchies before writing a single line of code.",
+    desc: "I analyze system requirements, map out database schemas, design REST API specifications, and plan component hierarchies before writing a single line of code.",
     video: "https://framerusercontent.com/assets/5XOHo4pmEgjD2iyilyHAlSTdpjM.mp4",
     poster: "https://framerusercontent.com/images/pnmTZlEROdgwtt8pvv9nKVfOs.webp?width=1280&height=720",
     topOffset: "115px",
@@ -16,7 +16,7 @@ const processCards = [
     num: "02",
     tag: "Develop",
     headline: "Write clean, scalable code.",
-    desc: "We engineer performant Next.js & React frontends, robust Node.js and Express backend controllers, and integrate seamless database operations with clean architecture.",
+    desc: "I engineer performant Next.js & React frontends, robust Node.js and Express backend controllers, and integrate seamless database operations with clean architecture.",
     video: "https://framerusercontent.com/assets/zOaJDiLhoEfoWyk485PTN0qH2ms.mp4",
     poster: "https://framerusercontent.com/images/Efd1t64QYLXKNVR1VYSzMRX5nM.webp?width=1280&height=720",
     topOffset: "175px",
@@ -25,7 +25,7 @@ const processCards = [
     num: "03",
     tag: "Refine",
     headline: "Speed audits & QA testing.",
-    desc: "We benchmark database queries, test cross-device responsiveness, eliminate bottlenecks, and ensure 100/100 Core Web Vitals performance.",
+    desc: "I benchmark database queries, test cross-device responsiveness, eliminate bottlenecks, and ensure 100/100 Core Web Vitals performance.",
     video: "https://framerusercontent.com/assets/LyWagnodebINdgaBaOCxLNvRAs.mp4",
     poster: "https://framerusercontent.com/images/iST8nlwNNNZi2CyDkhxQuJwGEwE.webp?width=1280&height=720",
     topOffset: "235px",
@@ -34,7 +34,7 @@ const processCards = [
     num: "04",
     tag: "Deploy",
     headline: "Production-ready launch.",
-    desc: "We configure automated CI/CD pipelines, containerized deployments on Vercel and Render, custom domain DNS, and server monitoring for 99.9% uptime.",
+    desc: "I configure automated CI/CD pipelines, containerized deployments on Vercel and Render, custom domain DNS, and server monitoring for 99.9% uptime.",
     video: "https://framerusercontent.com/assets/F3wAQyQqJ7sq4KvxgwoJpo.mp4",
     poster: "https://framerusercontent.com/images/QWVqIWFzjcWRjZfdHO3fSqbHk.webp?width=1280&height=720",
     topOffset: "295px",
@@ -43,7 +43,7 @@ const processCards = [
 
 export default function HowIWork() {
   return (
-    <section className="vl-section vl-process-section" id="process" aria-label="Our engineering process">
+    <section className="vl-section vl-process-section" id="process" aria-label="My engineering process">
       <div className="vl-container">
         {/* SECTION HEADER */}
         <div className="vl-section-head">
@@ -53,7 +53,7 @@ export default function HowIWork() {
               FROM SYSTEM DESIGN <span className="vl-heading-muted">TO PRODUCTION LAUNCH.</span>
             </h2>
             <p className="vl-head-desc">
-              Every software project starts with a problem to solve. We analyze requirements, architect scalable foundations, and engineer clean code that performs.
+              Every software project starts with a problem to solve. I analyze requirements, architect scalable foundations, and engineer clean code that performs.
             </p>
           </div>
         </div>

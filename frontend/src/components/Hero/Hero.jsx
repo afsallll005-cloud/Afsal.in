@@ -16,7 +16,7 @@ export default function Hero({
   };
 
   return (
-    <section className="forma-hero" id="home" aria-label="Hero Section - FORMA STUDIO">
+    <section className="forma-hero" id="home" aria-label="Hero Section - Mohammed Afsal">
       {/* HERO MEDIA LAYER: DEDICATED LAPTOP & PHONE RESPONSIVE IMAGES */}
       <div className="forma-media-layer">
         <div className="forma-image-wrap">
@@ -74,7 +74,7 @@ export default function Hero({
             {/* BOTTOM LEFT: SUBTITLE */}
             <div className="forma-bottom-left">
               <p className="forma-lead-text">
-                We create design and development that helps teams launch faster, look sharper, and grow smarter.
+                I create design and development that helps teams launch faster, look sharper, and grow smarter.
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export default function Hero({
                   href="#contact"
                   className="forma-contact-pill"
                   onClick={handleContactClick}
-                  aria-label="Contact with us"
+                  aria-label="Contact me"
                 >
                   <span className="forma-pill-icon">
                     <svg
@@ -102,7 +102,7 @@ export default function Hero({
                       <polyline points="12 5 19 12 12 19" />
                     </svg>
                   </span>
-                  <span className="forma-pill-label">Contact with us</span>
+                  <span className="forma-pill-label">Contact me</span>
                 </a>
               </div>
 
@@ -144,7 +144,7 @@ export default function Hero({
           </div>
 
           <p className="forma-mobile-lead-text">
-            We create design and development that helps teams launch faster, look sharper, and grow smarter.
+            I create design and development that helps teams launch faster, look sharper, and grow smarter.
           </p>
 
           <div className="forma-mobile-cta-wrap">
@@ -152,7 +152,7 @@ export default function Hero({
               href="#contact"
               className="forma-contact-pill forma-contact-pill--mobile"
               onClick={handleContactClick}
-              aria-label="Contact with us"
+              aria-label="Contact me"
             >
               <span className="forma-pill-icon">
                 <svg
@@ -169,7 +169,7 @@ export default function Hero({
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </span>
-              <span className="forma-pill-label">Contact with us</span>
+              <span className="forma-pill-label">Contact me</span>
             </a>
           </div>
         </div>

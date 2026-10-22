@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "MHD Afsal — Full-Stack Software Developer & Web Designer",
   description:
-    "We create design and development that helps teams launch faster, look sharper, and grow smarter. Portfolio of Mohammed Afsal.",
+    "I create design and development that helps teams launch faster, look sharper, and grow smarter. Portfolio of Mohammed Afsal.",
   icons: {
     icon: [
       { url: "/images/logo.png" },
@@ -13,9 +13,9 @@ export const metadata = {
     apple: "/images/logo.png",
   },
   openGraph: {
-    title: "FORMA STUDIO™ — Modern Design & Software Engineering",
+    title: "Mohammed Afsal — Full-Stack Software Developer & Web Designer",
     description:
-      "We create design and development that helps teams launch faster, look sharper, and grow smarter.",
+      "I create design and development that helps teams launch faster, look sharper, and grow smarter.",
     type: "website",
   },
 };

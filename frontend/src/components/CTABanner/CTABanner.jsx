@@ -32,7 +32,7 @@ export default function CTABanner({ onOpenContact }) {
               <div className="vl-cta-brand">
                 <span className="vl-cta-logo-text">MHD AFSAL</span>
                 <span className="vl-cta-dash" />
-                <span className="vl-cta-subtext">Let’s Build Together</span>
+                <span className="vl-cta-subtext">Let’s Build Something Great Together</span>
               </div>
 
               

@@ -47,7 +47,7 @@ export default function EveryFrame() {
               EVERY LINE OF CODE HAS A PURPOSE.
             </h2>
             <p className="vl-everyframe-sub">
-              From the database query to the final frontend animation, we obsess over writing clean, maintainable, and high-performance code that makes software a joy to use.
+              From the database query to the final frontend animation, I obsess over writing clean, maintainable, and high-performance code that makes software a joy to use.
             </p>
           </div>
         </div>
