@@ -20,7 +20,7 @@ const nextConfig = {
     return [
       {
         source: "/favicon.ico",
-        destination: "/images/logo.png",
+        destination: "/images/LogoWhite.png",
       },
       {
         source: "/logo.png",

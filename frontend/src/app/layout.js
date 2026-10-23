@@ -6,11 +6,11 @@ export const metadata = {
     "I create design and development that helps teams launch faster, look sharper, and grow smarter. Portfolio of Mohammed Afsal.",
   icons: {
     icon: [
-      { url: "/images/logo.png" },
-      { url: "/images/logo.png", type: "image/png" },
+      { url: "/images/LogoWhite.png" },
+      { url: "/images/LogoWhite.png", type: "image/png" },
     ],
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    shortcut: "/images/LogoWhite.png",
+    apple: "/images/LogoWhite.png",
   },
   openGraph: {
     title: "Mohammed Afsal — Full-Stack Software Developer & Web Designer",
@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
-        <link rel="shortcut icon" href="/images/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="icon" href="/images/LogoWhite.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/images/LogoWhite.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/LogoWhite.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
