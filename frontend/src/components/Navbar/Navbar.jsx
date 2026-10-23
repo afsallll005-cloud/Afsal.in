@@ -49,7 +49,7 @@ export default function Navbar() {
                 <path d="M20 5L18 10" stroke="white" strokeWidth="1.5" />
               </svg>
             </div> */}
-            <span className="vl-logo-title">MHD AFSAL</span>
+            <span className="vl-logo-title">afsal.</span>
           </a>
 
           {/* MENU TOGGLE BUTTON (MATCHING IMAGE: CLEAN LOGO ON LEFT, MENU ON RIGHT) */}

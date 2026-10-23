@@ -50,11 +50,11 @@
 
 .vl-logo-title {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--text-primary);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* MENU BUTTON (CLEAN MINIMAL MATCHING REFERENCE IMAGE) */

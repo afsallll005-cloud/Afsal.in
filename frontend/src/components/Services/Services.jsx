@@ -9,17 +9,17 @@ const servicesData = [
     title: "Full-Stack Web Apps",
     description:
       "Enterprise-ready Next.js and React web applications engineered with resilient backend APIs, fast database operations, and scalable MVC architecture.",
-    video: "https://framerusercontent.com/assets/PQjoMgqgDBd7giRzoEABqWt560.mp4",
-    poster: "https://framerusercontent.com/images/mvYXP70gOT6jq3r6MRGh4kEQk.webp?width=1080&height=1920",
+    video: "./images/Fullstack.mp4",
+    poster: "./images/Fullstack.mp4",
     deliverables: ["Next.js 15 SSR", "React 19 & TypeScript", "REST & GraphQL APIs", "MongoDB & PostgreSQL"],
   },
   {
     num: "02",
-    title: "Headless E-Commerce",
+    title: "E-Commerce Web Apps",
     description:
       "Detailed, visually rich online stores with frictionless navigation, custom cart drawers, and optimized checkout funnels built for high sales conversion.",
-    video: "https://framerusercontent.com/assets/1Bqep4DdtwwAIhLAf8Qo4z9h2A0.mp4",
-    poster: "https://framerusercontent.com/images/1EfC19LV8WVxVZdBXyKuL7iWRps.webp?width=1080&height=1920",
+    video: "./images/ecommerceWeb.mp4",
+    poster: "./images/ecommerceWeb.mp4",
     deliverables: ["Custom Storefronts", "Stripe & Razorpay", "Inventory Sync", "Order Management"],
   },
   {
@@ -27,8 +27,8 @@ const servicesData = [
     title: "Backend & API Systems",
     description:
       "High-throughput Node.js and Express server architectures, secure JWT/OAuth authentication, database modeling, and third-party API integrations.",
-    video: "https://framerusercontent.com/assets/PrJVkH4cnGzcgSIzerz1da3Qr0.mp4",
-    poster: "https://framerusercontent.com/images/GcRUM2AsuKf5OtagutHxYswg.webp?width=1080&height=1920",
+    video: "./images/Backend.mp4",
+    poster: "./images/Backend.mp4",
     deliverables: ["Node.js & Express", "JWT Authentication", "Database Indexing", "Webhook Automation"],
   },
   {
@@ -36,8 +36,8 @@ const servicesData = [
     title: "Modern Web Design",
     description:
       "Bespoke, human-centered digital experiences with architectural typography, intuitive user flows, and responsive design systems in Figma.",
-    video: "https://framerusercontent.com/assets/o3yKmyUMFvPTU41H0uLrMDLCsw.mp4",
-    poster: "https://framerusercontent.com/images/ZVR8X0clJuNJeayMaHfi1TUaCM.webp?width=1280&height=720",
+    video: "./images/Modern.mp4",
+    poster: "./images/Modern.mp4",
     deliverables: ["Figma Design Systems", "Responsive UI/UX", "Interactive Prototypes", "Wireframe Architecture"],
   },
   {
@@ -45,8 +45,8 @@ const servicesData = [
     title: "Performance & DevOps",
     description:
       "Comprehensive performance auditing, sub-second load time optimization, automated CI/CD pipelines, and cloud hosting on Vercel and Render.",
-    video: "https://framerusercontent.com/assets/pAv63CtJVvao1KrZ51lVWOAVrAs.mp4",
-    poster: "https://framerusercontent.com/images/oBG7txq9WIZyZOAgrMV6ILcgwaA.webp?width=1280&height=720",
+    video: "./images/Performance.mp4",
+    poster: "./images/Performance.mp4",
     deliverables: ["100/100 Core Web Vitals", "CI/CD Workflows", "Vercel & Render Setup", "Technical SEO Tuning"],
   },
 ];
