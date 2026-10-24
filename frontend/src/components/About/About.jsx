@@ -147,7 +147,7 @@ export default function About() {
             <div className="vl-viewfinder-box vl-about-viewfinder">
               <video
                 src="./images/AboutVideo.mp4"
-                poster="https://framerusercontent.com/images/Bxm24q2tE94h3nuUwYxjexNW7GE.webp?width=1080&height=1080"
+                poster="./images/AboutVideo.mp4"
                 autoPlay
                 loop
                 muted
