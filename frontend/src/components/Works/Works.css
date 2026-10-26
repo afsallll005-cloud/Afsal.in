@@ -21,6 +21,17 @@
 }
 
 /* =========================================================
+   PROJECT REVEAL ITEM (SCROLL-TRIGGERED ANIMATION WRAPPER)
+========================================================= */
+
+.project-reveal-item {
+  width: 100%;
+  min-width: 0;
+  display: block;
+  will-change: transform, opacity;
+}
+
+/* =========================================================
    PROJECT CARD (POSTER STYLE)
 ========================================================= */
 
@@ -778,6 +789,12 @@
 
 /* REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
+  .project-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .project-img,
   .project-overlay,
   .project-overlay-btn,

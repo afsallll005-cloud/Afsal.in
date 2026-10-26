@@ -68,6 +68,13 @@
   gap: 70px 30px;
 }
 
+.project-reveal-item {
+  width: 100%;
+  min-width: 0;
+  display: block;
+  will-change: transform, opacity;
+}
+
 .project-card {
   position: relative;
 
@@ -214,5 +221,24 @@
 
   .project-info h3 {
     font-size: 15px;
+  }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .project-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .project-image img,
+  .project-arrow {
+    transition: none !important;
+  }
+
+  .project-card:hover .project-image img,
+  .project-card:hover .project-arrow {
+    transform: none !important;
   }
 }

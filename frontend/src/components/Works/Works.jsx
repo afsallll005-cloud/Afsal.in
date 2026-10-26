@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { API_BASE_URL } from "@/utils/api";
 import "./Works.css";
 
@@ -165,6 +166,28 @@ export default function Works({ onOpenContact }) {
   const [projects, setProjects] = useState(defaultProjects);
   const [loading, setLoading] = useState(false);
 
+  const shouldReduceMotion = useReducedMotion();
+  const [columns, setColumns] = useState(4);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      const width = window.innerWidth;
+      if (width <= 420) {
+        setColumns(1);
+      } else if (width <= 640) {
+        setColumns(2);
+      } else if (width <= 900) {
+        setColumns(3);
+      } else {
+        setColumns(4);
+      }
+    };
+
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
+
   /* =========================================================
      FETCH PROJECTS FROM BACKEND
   ========================================================= */
@@ -286,44 +309,60 @@ export default function Works({ onOpenContact }) {
           ================================================== */}
           {displayedProjects.length > 0 ? (
             <div className="works-grid">
-              {displayedProjects.map((project) => (
-                <article
+              {displayedProjects.map((project, index) => (
+                <motion.div
                   key={project.id}
-                  className="project-card"
-                  onClick={() => setSelectedProject(project)}
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`Open details for ${project.title}`}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setSelectedProject(project);
-                    }
+                  className="project-reveal-item"
+                  initial={
+                    shouldReduceMotion
+                      ? { opacity: 1, y: 0, scale: 1 }
+                      : { opacity: 0, y: 32, scale: 0.95 }
+                  }
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
+                  transition={{
+                    duration: shouldReduceMotion ? 0 : 0.65,
+                    ease: [0.16, 1, 0.3, 1],
+                    delay: shouldReduceMotion ? 0 : (index % columns) * 0.08,
                   }}
                 >
-                  {/* PROJECT POSTER IMAGE */}
-                  <div className="project-image-wrapper">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="project-img"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.src = "/images/works(1).png";
-                      }}
-                    />
+                  <article
+                    className="project-card"
+                    onClick={() => setSelectedProject(project)}
+                    tabIndex={0}
+                    role="button"
+                    aria-label={`Open details for ${project.title}`}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setSelectedProject(project);
+                      }
+                    }}
+                  >
+                    {/* PROJECT POSTER IMAGE */}
+                    <div className="project-image-wrapper">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="project-img"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = "/images/works(1).png";
+                        }}
+                      />
 
-                    {/* HOVER OVERLAY */}
-                    <div className="project-overlay">
-                      <span className="project-overlay-title">{project.title}</span>
-                      <span className="project-overlay-btn" aria-hidden="true">
-                        <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor">
-                          <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
-                        </svg>
-                      </span>
+                      {/* HOVER OVERLAY */}
+                      <div className="project-overlay">
+                        <span className="project-overlay-title">{project.title}</span>
+                        <span className="project-overlay-btn" aria-hidden="true">
+                          <svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor">
+                            <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </motion.div>
               ))}
             </div>
           ) : (

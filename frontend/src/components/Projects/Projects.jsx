@@ -1,11 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { API_BASE_URL } from "@/utils/api";
 import "./Projects.css";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const shouldReduceMotion = useReducedMotion();
+  const [columns, setColumns] = useState(2);
+
+  useEffect(() => {
+    const updateColumns = () => {
+      setColumns(window.innerWidth <= 700 ? 1 : 2);
+    };
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
+    return () => window.removeEventListener("resize", updateColumns);
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -67,59 +79,60 @@ export default function Projects() {
 
       <div className="project-grid">
 
-        {projects.map((project) => (
-
-          <article
-            className="project-card"
-            key={project._id || project.numberId}
+        {projects.map((project, index) => (
+          <motion.div
+            key={project._id || project.numberId || `proj-${index}`}
+            className="project-reveal-item"
+            initial={
+              shouldReduceMotion
+                ? { opacity: 1, y: 0, scale: 1 }
+                : { opacity: 0, y: 32, scale: 0.95 }
+            }
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
+            transition={{
+              duration: shouldReduceMotion ? 0 : 0.65,
+              ease: [0.16, 1, 0.3, 1],
+              delay: shouldReduceMotion ? 0 : (index % columns) * 0.1,
+            }}
           >
-
-            <div className="project-number">
-              {project.numberId}
-            </div>
-
-
-            <div className="project-image">
-
-              <img
-                src={project.image}
-                alt={project.title}
-                onError={(event) => {
-                  event.currentTarget.style.display =
-                    "none";
-                }}
-              />
-
-              <div className="project-placeholder">
-                {project.title.split(" ")[0]}
+            <article className="project-card">
+              <div className="project-number">
+                {project.numberId}
               </div>
 
-            </div>
+              <div className="project-image">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  onError={(event) => {
+                    event.currentTarget.style.display =
+                      "none";
+                  }}
+                />
 
-
-            <div className="project-info">
-
-              <div>
-
-                <h3>
-                  {project.title}
-                </h3>
-
-                <p>
-                  {project.tags && project.tags.length > 0 ? project.tags.join(', ') : project.type}
-                </p>
-
+                <div className="project-placeholder">
+                  {project.title.split(" ")[0]}
+                </div>
               </div>
 
+              <div className="project-info">
+                <div>
+                  <h3>
+                    {project.title}
+                  </h3>
 
-              <span className="project-arrow">
-                ↗
-              </span>
+                  <p>
+                    {project.tags && project.tags.length > 0 ? project.tags.join(', ') : project.type}
+                  </p>
+                </div>
 
-            </div>
-
-          </article>
-
+                <span className="project-arrow">
+                  ↗
+                </span>
+              </div>
+            </article>
+          </motion.div>
         ))}
 
       </div>
