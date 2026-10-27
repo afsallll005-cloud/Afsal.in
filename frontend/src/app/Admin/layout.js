@@ -15,10 +15,22 @@ import {
   FiX,
   FiShield,
   FiFileText,
+  FiLock,
 } from "react-icons/fi";
+import { AdminAuthProvider, useAdminAuth } from "./AdminAuthContext";
+import AdminPasswordGate from "./AdminPasswordGate";
 import "./admin.css";
 
 export default function AdminLayout({ children }) {
+  return (
+    <AdminAuthProvider>
+      <AdminLayoutInner>{children}</AdminLayoutInner>
+    </AdminAuthProvider>
+  );
+}
+
+function AdminLayoutInner({ children }) {
+  const { isAuthenticated, isLoading, logout } = useAdminAuth();
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -61,6 +73,21 @@ export default function AdminLayout({ children }) {
     { name: "Contacts", href: "/Admin/contacts", icon: <FiMail /> },
   ];
 
+  // If still checking authentication state, render subtle dark loading screen
+  if (isLoading) {
+    return (
+      <div className="admin-loading-screen">
+        <div className="admin-gate-spinner" />
+        <p>Loading Admin Panel...</p>
+      </div>
+    );
+  }
+
+  // If not authenticated, prompt with password box
+  if (!isAuthenticated) {
+    return <AdminPasswordGate />;
+  }
+
   return (
     <div className="admin-layout">
       {/* Mobile Top Header */}
@@ -69,14 +96,25 @@ export default function AdminLayout({ children }) {
           <div className="admin-brand-icon mini">A</div>
           <span className="admin-mobile-title">MHDAFSAL Admin</span>
         </Link>
-        <button
-          type="button"
-          className="admin-mobile-toggle-btn"
-          onClick={() => setMobileOpen((prev) => !prev)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileOpen ? <FiX /> : <FiMenu />}
-        </button>
+        <div className="admin-mobile-actions">
+          <button
+            type="button"
+            className="admin-mobile-lock-btn"
+            onClick={logout}
+            title="Lock Admin Panel"
+            aria-label="Lock Admin Panel"
+          >
+            <FiLock />
+          </button>
+          <button
+            type="button"
+            className="admin-mobile-toggle-btn"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
       </header>
 
       {/* Backdrop for mobile drawer */}
@@ -162,6 +200,17 @@ export default function AdminLayout({ children }) {
               <span className="admin-user-role">Administrator</span>
             </div>
           </div>
+
+          {/* Lock / Log Out Button */}
+          <button
+            type="button"
+            className="admin-sidebar-lock-btn"
+            onClick={logout}
+            title="Lock Admin Panel"
+          >
+            <FiLock />
+            <span>Lock / Logout</span>
+          </button>
 
           <div className="admin-sidebar-footer-note">
             <span>Portfolio CMS • v2.0</span>

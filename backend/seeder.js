@@ -5,6 +5,7 @@ const Project = require('./src/models/Project');
 const Skill = require('./src/models/Skill');
 const Contact = require('./src/models/Contact');
 const Hero = require('./src/models/Hero');
+const Admin = require('./src/models/Admin');
 const projects = require('./src/data/projects');
 
 dotenv.config();
@@ -27,6 +28,7 @@ const importData = async () => {
     await Skill.deleteMany();
     await Contact.deleteMany();
     await Hero.deleteMany();
+    await Admin.deleteMany();
 
     // Import projects (if any)
     if (projects && projects.length > 0) {
@@ -44,7 +46,13 @@ const importData = async () => {
       stat2Label: 'PROJECTS COMPLETED',
     });
 
-    console.log('Data Imported Successfully!');
+    // Seed Admin credentials with password 14345
+    await Admin.create({
+      username: 'admin',
+      password: '14345',
+    });
+
+    console.log('Data Imported Successfully with Admin password: 14345');
     process.exit();
   } catch (error) {
     console.error(`Error with data import: ${error.message}`);
@@ -58,6 +66,7 @@ const destroyData = async () => {
     await Skill.deleteMany();
     await Contact.deleteMany();
     await Hero.deleteMany();
+    await Admin.deleteMany();
 
     console.log('Data Destroyed!');
     process.exit();

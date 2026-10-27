@@ -10,6 +10,7 @@ const skillRoutes = require('./routes/skillRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const heroRoutes = require('./routes/heroRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 dotenv.config();
 
@@ -118,6 +119,9 @@ app.use('/hero', heroRoutes);
 
 app.use('/api/about', aboutRoutes);
 app.use('/about', aboutRoutes);
+
+app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 
 // Only start listening when run directly via node / nodemon, not when required by serverless
 if (require.main === module) {
