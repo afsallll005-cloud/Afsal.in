@@ -65,8 +65,8 @@ export default function About() {
     tagline: "I don’t just write code. I engineer scalable digital solutions.",
     bio: "I am a Full-Stack Software Developer & Web Engineer based in Malappuram, Kerala. Focused on crafting robust, production-grade web applications using modern technologies including Next.js, React, Node.js, Express, and MongoDB. From system architecture to frontend performance, I build clean, testable, and maintainable software that solves real business challenges.",
     resumeText: "Download CV",
-    resumeFile: "/images/MohammedAfsal_Fullstack_Developer.pdf",
-    resumeFileName: "MohammedAfsal_Fullstack_Developer.pdf",
+    resumeFile: "/images/Afsal_Mernstack_Developer.pdf",
+    resumeFileName: "Afsal_Mernstack_Developer.pdf",
     resumeLink: "",
   });
 
