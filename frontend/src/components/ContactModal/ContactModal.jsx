@@ -160,10 +160,7 @@ export default function ContactModal({ isOpen, onClose }) {
 
         {/* MODAL HEADER */}
         <div className="cm-head">
-          <div className="cm-hud-tag">
-            <span className="cm-status-dot" />
-            <span className="cm-status-text">AVAILABLE FOR NEW PROJECTS</span>
-          </div>
+          
 
           <h2 id="contact-modal-title" className="cm-title">
             LET’S WORK <span className="cm-title-muted">TOGETHER.</span>
@@ -229,27 +226,7 @@ export default function ContactModal({ isOpen, onClose }) {
             )}
 
             {/* SERVICE SELECTION PILLS */}
-            <div className="cm-field">
-              <label className="cm-label">
-                WHAT SERVICES DO YOU NEED? <span className="cm-optional">(OPTIONAL)</span>
-              </label>
-              <div className="cm-services-grid">
-                {SERVICE_OPTIONS.map((service) => {
-                  const isSelected = selectedServices.includes(service);
-                  return (
-                    <button
-                      key={service}
-                      type="button"
-                      className={`cm-service-chip ${isSelected ? "selected" : ""}`}
-                      onClick={() => toggleService(service)}
-                    >
-                      <span className="cm-chip-icon">{isSelected ? "✓" : "+"}</span>
-                      <span>{service}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+            
 
             {/* NAME & EMAIL DUAL ROW */}
             <div className="cm-row-2">
@@ -262,7 +239,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   name="name"
                   type="text"
                   required
-                  placeholder="e.g. Marcus Reed"
+                  placeholder="e.g. Afsal"
                   value={formData.name}
                   onChange={handleChange}
                   className="cm-input"
@@ -279,7 +256,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   name="email"
                   type="email"
                   required
-                  placeholder="e.g. marcus@company.com"
+                  placeholder="e.g. afsal@company.com"
                   value={formData.email}
                   onChange={handleChange}
                   className="cm-input"
