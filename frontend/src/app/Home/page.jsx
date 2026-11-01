@@ -29,7 +29,7 @@ export default function Home() {
       {/* <Testimonials /> */}
       <Brands />
       {/* <EveryFrame /> */}
-      {/* <HowIWork /> */}
+      <HowIWork />
       <FAQ />
       {/* <CTABanner onOpenContact={() => setContactModalOpen(true)} /> */}
       <Footer onOpenContact={() => setContactModalOpen(true)} />
