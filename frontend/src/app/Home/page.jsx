@@ -31,7 +31,7 @@ export default function Home() {
       {/* <EveryFrame /> */}
       {/* <HowIWork /> */}
       <FAQ />
-      <CTABanner onOpenContact={() => setContactModalOpen(true)} />
+      {/* <CTABanner onOpenContact={() => setContactModalOpen(true)} /> */}
       <Footer onOpenContact={() => setContactModalOpen(true)} />
 
       {/* FULL EXPERIENCE CONTACT INQUIRY MODAL */}
