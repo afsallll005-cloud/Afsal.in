@@ -432,3 +432,14 @@ button {
 .vl-btn-action:hover svg {
   transform: translate(3px, -3px);
 }
+
+/* Global Button Sharp Corners */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+.btn,
+.btn-primary,
+.btn-secondary {
+  border-radius: 0 !important;
+}

@@ -48,17 +48,17 @@ export default function Hero({
         {/* DESKTOP FLOATING CROSSHAIR SERVICES GRID */}
         <div className="forma-crosshair-container">
           <div className="forma-crosshair-row forma-crosshair-row-1">
-            <span className="forma-chip">Branding</span>
+            <span className="forma-chip">Frontend Development</span>
             <span className="forma-cross" aria-hidden="true">+</span>
-            <span className="forma-chip">UX/UI Design</span>
+            <span className="forma-chip">Database Architecture</span>
             <span className="forma-cross" aria-hidden="true">+</span>
-            <span className="forma-chip">Deploy</span>
+            <span className="forma-chip">Cloud Deployment</span>
           </div>
           <div className="forma-crosshair-row forma-crosshair-row-2">
             <span className="forma-cross" aria-hidden="true">+</span>
-            <span className="forma-chip">Web Design</span>
+            <span className="forma-chip">Backend Engineering</span>
             <span className="forma-cross" aria-hidden="true">+</span>
-            <span className="forma-chip">App Design</span>
+            <span className="forma-chip">Authentication & Security</span>
             <span className="forma-cross" aria-hidden="true">+</span>
           </div>
         </div>

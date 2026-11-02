@@ -166,12 +166,11 @@ export default function ContactModal({ isOpen, onClose }) {
             LET’S WORK <span className="cm-title-muted">TOGETHER.</span>
           </h2>
           <p className="cm-desc">
-            Have a project in mind, need scalable full-stack engineering, or want to discuss architecture?
-            Drop your details below and I’ll respond within 24 hours.
+            Have a project in mind? Let’s build it. Share your details, and I’ll respond within 24 hours.
           </p>
 
           {/* QUICK DIRECT CONTACT PILLS */}
-          <div className="cm-quick-links">
+          {/* <div className="cm-quick-links">
             <button
               type="button"
               className="cm-quick-pill"
@@ -193,7 +192,7 @@ export default function ContactModal({ isOpen, onClose }) {
               </svg>
               <span>Malappuram, Kerala, India</span>
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* MODAL BODY */}
