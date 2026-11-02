@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import "./Services.css";
 
 const servicesData = [
@@ -53,6 +54,7 @@ const servicesData = [
 
 export default function Services() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -67,7 +69,7 @@ export default function Services() {
         });
       },
       {
-        rootMargin: "-20% 0px -45% 0px",
+        rootMargin: "-15% 0px -35% 0px",
         threshold: 0.15,
       }
     );
@@ -90,7 +92,13 @@ export default function Services() {
     <section className="vl-section vl-services-section" id="services" aria-label="My Services">
       <div className="vl-container">
         {/* SECTION HEADER */}
-        <div className="vl-section-head">
+        <motion.div
+          className="vl-section-head"
+          initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
           <span className="vl-label">Services</span>
           <div className="vl-head-row">
             <h2 className="vl-heading">
@@ -100,7 +108,7 @@ export default function Services() {
               From database modeling to frontend interactivity, I combine system architecture, full-stack programming, and clean code to build software that performs.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* TWO COLUMN SERVICES BODY */}
         <div className="vl-services-body">
@@ -124,14 +132,26 @@ export default function Services() {
           <div className="vl-services-cards">
             {servicesData.map((service, index) => {
               const isEven = index % 2 === 0;
+              const isActive = activeIdx === index;
 
               return (
-                <div
+                <motion.div
                   key={service.num}
                   id={`service-card-${index}`}
                   data-index={index}
-                  className={`vl-service-row ${isEven ? "normal" : "reverse"}`}
+                  className={`vl-service-row ${isEven ? "normal" : "reverse"} ${isActive ? "is-active" : ""}`}
                   onMouseEnter={() => setActiveIdx(index)}
+                  initial={
+                    shouldReduceMotion
+                      ? { opacity: 1, y: 0, scale: 1 }
+                      : { opacity: 0, y: 36, scale: 0.98 }
+                  }
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.12, margin: "0px 0px -40px 0px" }}
+                  transition={{
+                    duration: shouldReduceMotion ? 0 : 0.65,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                 >
                   {/* MEDIA BOX */}
                   <div className="vl-service-media">
@@ -167,7 +187,7 @@ export default function Services() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

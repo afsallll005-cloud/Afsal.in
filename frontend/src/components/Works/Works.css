@@ -40,7 +40,7 @@
   display: block;
   cursor: pointer;
   text-decoration: none;
-  /* border-radius: 8px; */
+  border-radius: 0;
   overflow: hidden;
   outline: none;
   min-width: 0;
@@ -73,7 +73,7 @@
   aspect-ratio: 4 / 5;
   position: relative;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 0;
   background-color: #121418;
 }
 
@@ -164,7 +164,7 @@
   justify-content: center;
   text-align: center;
   border: 1px dashed rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.02);
 }
 
@@ -646,7 +646,7 @@
   }
 
   .project-card {
-    border-radius: 6px;
+    border-radius: 0;
   }
 
   /* MODAL IN TABLET: SINGLE COLUMN STACK */
@@ -685,12 +685,12 @@
   }
 
   .project-card {
-    border-radius: 8px;
+    border-radius: 0;
   }
 
   .project-image-wrapper {
     aspect-ratio: 4 / 5.2;
-    border-radius: 8px;
+    border-radius: 0;
   }
 
   .project-overlay {
