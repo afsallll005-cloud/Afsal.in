@@ -4,7 +4,7 @@ import "./about-page.css";
 const BASE_URL = "https://afsalt.in";
 
 const socialLinks = {
-  linkedin: "www.linkedin.com/in/mohammed-afsal-8a52b23aa",
+  linkedin: "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/",
   github: "https://github.com/afsallll005-cloud",
   // Add your actual Instagram profile URL when available.
   instagram: "",
