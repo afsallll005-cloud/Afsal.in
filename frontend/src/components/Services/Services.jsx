@@ -162,6 +162,8 @@ export default function Services() {
                       loop
                       muted
                       playsInline
+                      aria-label={`${service.title} demonstration video`}
+                      title={`${service.title} demonstration video`}
                       className="vl-service-video"
                     />
                     <div className="vl-service-shade" />

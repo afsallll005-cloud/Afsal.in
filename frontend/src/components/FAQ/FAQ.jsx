@@ -68,18 +68,33 @@ export default function FAQ() {
               <div
                 key={faq.num}
                 className={`vl-faq-item ${isOpen ? "open" : ""}`}
+                role="button"
+                tabIndex={0}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${idx}`}
                 onClick={() => toggle(idx)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggle(idx);
+                  }
+                }}
               >
                 <div className="vl-faq-trigger">
                   <span className="vl-faq-num">{faq.num}</span>
-                  <h3 className="vl-faq-question">{faq.question}</h3>
+                  <h3 className="vl-faq-question" id={`faq-question-${idx}`}>{faq.question}</h3>
                   <div className="vl-faq-toggle-icon">
                     <span className="vl-faq-toggle-line-h" />
                     <span className={`vl-faq-toggle-line-v ${isOpen ? "rotated" : ""}`} />
                   </div>
                 </div>
 
-                <div className={`vl-faq-content ${isOpen ? "expanded" : ""}`}>
+                <div
+                  id={`faq-answer-${idx}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${idx}`}
+                  className={`vl-faq-content ${isOpen ? "expanded" : ""}`}
+                >
                   <div className="vl-faq-content-inner">
                     <p className="vl-faq-answer">{faq.answer}</p>
                   </div>

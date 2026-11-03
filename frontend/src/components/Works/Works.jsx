@@ -343,9 +343,10 @@ export default function Works({ onOpenContact }) {
                     <div className="project-image-wrapper">
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} — ${project.category} Web Application by Mohammed Afsal`}
                         className="project-img"
                         loading="lazy"
+                        decoding="async"
                         onError={(e) => {
                           e.currentTarget.src = "/images/works(1).png";
                         }}
@@ -443,7 +444,8 @@ export default function Works({ onOpenContact }) {
             <div className="modal-img-wrapper">
               <img
                 src={selectedProject.image}
-                alt={selectedProject.title}
+                alt={`${selectedProject.title} — ${selectedProject.category} Project Showcase by Mohammed Afsal`}
+                decoding="async"
                 onError={(e) => {
                   e.currentTarget.src = "/images/works(1).png";
                 }}

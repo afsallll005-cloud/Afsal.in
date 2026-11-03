@@ -129,16 +129,21 @@ export default function About() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="vl-btn-action"
-                    aria-label="Download CV"
+                    aria-label="Download Mohammed Afsal CV"
                   >
                     <span>{aboutData.resumeText || "Download CV"}</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
-                  {/* <a href="#contact" className="vl-btn-link">
-                    Start a Technical Discussion →
-                  </a> */}
+                  <a
+                    href="/about"
+                    className="vl-btn-action"
+                    aria-label="View Mohammed Afsal full professional profile and background"
+                  >
+                    <span>Full Profile</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -153,6 +158,8 @@ export default function About() {
                 muted
                 playsInline
                 className="vl-viewfinder-video"
+                aria-label="Mohammed Afsal software engineering video presentation"
+                title="Mohammed Afsal Software Engineering Presentation"
               />
               <div className="vl-viewfinder-shade" />
 

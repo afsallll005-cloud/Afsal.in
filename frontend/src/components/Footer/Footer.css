@@ -197,6 +197,18 @@
   letter-spacing: -0.01em;
 }
 
+.vl-footer-link {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.vl-footer-link:hover {
+  color: var(--accent-neon, #d8f709);
+}
+
 .vl-footer-admin-link {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3);

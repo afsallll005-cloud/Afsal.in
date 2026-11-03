@@ -30,8 +30,9 @@ export default function Navbar() {
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Services", href: "#services" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Full Profile", href: "/about" },
     { name: "Contact", href: "#contact" },
-    { name: "Faq", href: "#process" },
   ];
 
   return (
@@ -39,7 +40,7 @@ export default function Navbar() {
       <header className={`vl-navbar ${scrolled ? "vl-navbar--scrolled" : ""}`}>
         <div className="vl-navbar-inner">
           {/* LOGO */}
-          <a href="#" className="vl-logo" aria-label="Home">
+          <a href="/" className="vl-logo" aria-label="Mohammed Afsal - Home">
             {/* <div className="vl-logo-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="5" width="18" height="15" rx="2" stroke="white" strokeWidth="1.5" />
@@ -57,7 +58,8 @@ export default function Navbar() {
             <button
               className={`vl-menu-btn ${menuOpen ? "open" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle Navigation Menu"
+              aria-label={menuOpen ? "Close Navigation Menu" : "Open Navigation Menu"}
+              aria-expanded={menuOpen}
             >
               <span className="vl-menu-label">{menuOpen ? "CLOSE" : "MENU"}</span>
               <div className="vl-menu-lines">
@@ -118,8 +120,8 @@ export default function Navbar() {
             </div>
             <div className="vl-drawer-socials">
               <a href="https://github.com/afsallll005-cloud" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/mohammed-afsal-8a52b23aa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://www.instagram.com/web.tek_" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/qubix.dzn?srtk=MWwxZ3JuamVldHl2dQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
         </div>

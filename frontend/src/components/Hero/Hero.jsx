@@ -17,6 +17,10 @@ export default function Hero({
 
   return (
     <section className="forma-hero" id="home" aria-label="Hero Section - Mohammed Afsal">
+      {/* PRIMARY SEO DOCUMENT HEADING */}
+      <h1 className="sr-only">
+        Mohammed Afsal — Full-Stack Software Developer &amp; Web Designer in Malappuram, Kerala, India
+      </h1>
       {/* HERO MEDIA LAYER: DEDICATED LAPTOP & PHONE RESPONSIVE IMAGES */}
       <div className="forma-media-layer">
         <div className="forma-image-wrap">
@@ -26,8 +30,10 @@ export default function Hero({
             {/* LAPTOP SIZE IMAGE (APPLIED ON DESKTOP & LAPTOP SCREENS > 860px) */}
             <img
               src={laptopImage}
-              alt="Mohammed Afsal Hero Showcase"
+              alt="Mohammed Afsal — Full-Stack Software Developer &amp; Web Designer Portfolio Showcase"
               className="forma-bust-image"
+              fetchPriority="high"
+              loading="eager"
             />
           </picture>
         </div>
@@ -66,7 +72,7 @@ export default function Hero({
         <div className="forma-desktop-inner">
           {/* TOP LINE: LEFT ALIGNED "MOHAMMED" */}
           <div className="forma-top-segment">
-            <h1 className="forma-brand-primary">MOHAMMED</h1>
+            <div className="forma-brand-primary" aria-hidden="true">MOHAMMED</div>
           </div>
 
           {/* BOTTOM SEGMENT: SUBTITLE (LEFT) & STUDIO + CTA BUTTON (RIGHT) */}
@@ -139,7 +145,7 @@ export default function Hero({
           </div> */}
 
           <div className="forma-mobile-headings">
-            <h1 className="forma-mobile-brand-main">Mohammed</h1>
+            <div className="forma-mobile-brand-main" aria-hidden="true">Mohammed</div>
             <span className="forma-mobile-brand-italic">Afsal t</span>
           </div>
 

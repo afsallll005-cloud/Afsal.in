@@ -17,7 +17,7 @@ export default function Footer({ onOpenContact, setContactModalOpen }) {
           {/* 3 SOCIAL MEDIA ICONS (INSTAGRAM, GITHUB, LINKEDIN) */}
           <div className="vl-footer-socials">
             <a
-              href="https://www.instagram.com/qubix.dzn"
+              href="https://www.instagram.com/qubix.dzn?srtk=MWwxZ3JuamVldHl2dQ=="
               target="_blank"
               rel="noopener noreferrer"
               className="vl-social-card"
@@ -43,7 +43,7 @@ export default function Footer({ onOpenContact, setContactModalOpen }) {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/mohammed-afsal-8a52b23aa"
+              href="https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/"
               target="_blank"
               rel="noopener noreferrer"
               className="vl-social-card"
@@ -90,7 +90,10 @@ export default function Footer({ onOpenContact, setContactModalOpen }) {
             <span className="vl-footer-copyright">
               © 2026 Mhdafsal, All Rights Reserved
             </span>
-            <a href="/Admin" className="vl-footer-admin-link">
+            <a href="/about" className="vl-footer-link">
+              About Profile
+            </a>
+            <a href="/Admin" className="vl-footer-admin-link" rel="nofollow">
               Admin
             </a>
           </div>
