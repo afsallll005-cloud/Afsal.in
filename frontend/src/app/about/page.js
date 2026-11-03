@@ -6,8 +6,7 @@ const BASE_URL = "https://afsalt.in";
 const socialLinks = {
   linkedin: "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/",
   github: "https://github.com/afsallll005-cloud",
-  // Add your actual Instagram profile URL when available.
-  instagram: "",
+  instagram: "https://www.instagram.com/qubix.dzn?srtk=MWwxZ3JuamVldHl2dQ==",
 };
 
 const skills = [

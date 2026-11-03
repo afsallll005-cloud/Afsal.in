@@ -17,7 +17,7 @@ export default function Footer({ onOpenContact, setContactModalOpen }) {
           {/* 3 SOCIAL MEDIA ICONS (INSTAGRAM, GITHUB, LINKEDIN) */}
           <div className="vl-footer-socials">
             <a
-              href="https://www.instagram.com/web.tek_"
+              href="https://www.instagram.com/qubix.dzn"
               target="_blank"
               rel="noopener noreferrer"
               className="vl-social-card"
