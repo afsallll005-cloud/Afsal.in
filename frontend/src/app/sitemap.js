@@ -2,14 +2,12 @@
 export default function sitemap() {
   return [
     {
-      url: "https://afsalt.in",
-      lastModified: new Date(),
+      url: "https://afsalt.in/",
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: "https://afsalt.in/about",
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
