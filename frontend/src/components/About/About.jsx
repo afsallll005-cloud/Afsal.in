@@ -64,7 +64,7 @@ export default function About() {
     name: "Mohammed Afsal",
     tagline: "I don’t just write code. I engineer scalable digital solutions.",
     bio: "I am a Full-Stack Software Developer & Web Engineer based in Malappuram, Kerala. Focused on crafting robust, production-grade web applications using modern technologies including Next.js, React, Node.js, Express, and MongoDB. From system architecture to frontend performance, I build clean, testable, and maintainable software that solves real business challenges.",
-    resumeText: "Download CV",
+    resumeText: "CV",
     resumeFile: "/images/Afsal_Mernstack_Developer.pdf",
     resumeFileName: "Afsal_Mernstack_Developer.pdf",
     resumeLink: "",
@@ -123,19 +123,7 @@ export default function About() {
                 <h3 className="vl-about-impact-quote">{aboutData.tagline}</h3>
                 <p className="vl-about-bio">{aboutData.bio}</p>
                 <div className="vl-about-links">
-                  <a
-                    href={cvHref}
-                    download={!isExternalLink ? (aboutData.resumeFileName || "MohammedAfsal_Fullstack_Developer.pdf") : undefined}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="vl-btn-action"
-                    aria-label="Download Mohammed Afsal CV"
-                  >
-                    <span>{aboutData.resumeText || "Download CV"}</span>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </a>
+                 
                   <a
                     href="/about"
                     className="vl-btn-action"
@@ -143,6 +131,33 @@ export default function About() {
                   >
                     <span>Full Profile</span>
                     <span aria-hidden="true">→</span>
+                  </a>
+
+
+                   <a
+                    href={cvHref}
+                    download={!isExternalLink ? (aboutData.resumeFileName || "MohammedAfsal_Fullstack_Developer.pdf") : undefined}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vl-btn-action vl-btn-cv"
+                    aria-label="Download Mohammed Afsal CV"
+                  >
+                    <span>{aboutData.resumeText === "Download CV" ? "CV" : (aboutData.resumeText || "CV")}</span>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
                   </a>
                 </div>
               </div>

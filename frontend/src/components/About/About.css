@@ -61,9 +61,19 @@
 .vl-about-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   margin-top: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
+.vl-about-links .vl-btn-action:hover {
+  background: #d8f709;
+  border-color: #d8f709;
+  color: #000000;
+}
+
+.vl-btn-cv:hover svg {
+  transform: translateY(3px) !important;
 }
 
 /* RIGHT VIEWFINDER BOX */
@@ -246,6 +256,19 @@
   }
   .vl-about-impact-quote {
     font-size: 22px;
+  }
+  .vl-about-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .vl-about-links .vl-btn-action {
+    padding: 10px 16px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
   }
   .vl-about-viewfinder {
     min-height: 300px;
