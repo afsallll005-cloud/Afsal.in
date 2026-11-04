@@ -163,41 +163,15 @@ export default function About() {
               </div>
             </div>
 
-            {/* RIGHT VIEWFINDER BOX */}
-            <div className="vl-viewfinder-box vl-about-viewfinder">
-              <video
-                src="./images/AboutVideo.mp4"
-                poster="./images/AboutVideo.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="vl-viewfinder-video"
-                aria-label="Mohammed Afsal software engineering video presentation"
-                title="Mohammed Afsal Software Engineering Presentation"
+            {/* RIGHT IMAGE BOX */}
+            <div className="vl-about-image-box">
+              <img
+                src="/images/AboutSectionImg01.png"
+                alt="Mohammed Afsal — Full-Stack Software Developer & Web Designer"
+                className="vl-about-img"
+                loading="lazy"
+                decoding="async"
               />
-              <div className="vl-viewfinder-shade" />
-
-              {/* VIEWFINDER CORNERS */}
-              <div className="vl-corner vl-corner-tl" />
-              <div className="vl-corner vl-corner-tr" />
-              <div className="vl-corner vl-corner-br" />
-              <div className="vl-corner vl-corner-bl" />
-
-              {/* CAMERA HUD */}
-              <div className="vl-hud">
-                <div className="vl-hud-rec">
-                  <span className="vl-hud-dot" />
-                  <span className="vl-hud-rec-text">SYSTEM ACTIVE</span>
-                </div>
-                <div className="vl-hud-bottom">
-                  <div className="vl-hud-chips">
-                    <span className="vl-hud-chip">MERN</span>
-                    <span className="vl-hud-chip">FULL</span>
-                  </div>
-                  <span className="vl-hud-time">00:01:26</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
