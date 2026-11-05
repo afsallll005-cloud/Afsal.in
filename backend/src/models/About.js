@@ -38,15 +38,15 @@ const aboutSchema = new mongoose.Schema(
     },
     linkedinUrl: {
       type: String,
-      default: 'https://www.linkedin.com/in/mohammed-afsal-8a52b23aa',
+      default: 'https://www.linkedin.com/in/mohammed-afsalt',
     },
     githubUrl: {
       type: String,
-      default: 'https://github.com/afsallll005-cloud',
+      default: 'https://github.com/mhdafsalt',
     },
     instagramUrl: {
       type: String,
-      default: 'https://www.instagram.com/web.tek_?stkn=MWwxZ3JuamVldHl2dQ==',
+      default: 'https://www.instagram.com/qubix.dzn',
     },
     facebookUrl: {
       type: String,

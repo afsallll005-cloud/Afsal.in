@@ -20,9 +20,9 @@ const getAbout = async (req, res) => {
         resumeLink: '',
         resumeFile: '/images/MohammedAfsal_Fullstack_Developer.pdf',
         resumeFileName: 'MohammedAfsal_Fullstack_Developer.pdf',
-        linkedinUrl: 'https://www.linkedin.com/in/mohammed-afsal-8a52b23aa',
-        githubUrl: 'https://github.com/afsallll005-cloud',
-        instagramUrl: 'https://www.instagram.com/web.tek_?stkn=MWwxZ3JuamVldHl2dQ==',
+        linkedinUrl: 'https://www.linkedin.com/in/mohammed-afsalt',
+        githubUrl: 'https://github.com/mhdafsalt',
+        instagramUrl: 'https://www.instagram.com/qubix.dzn',
         facebookUrl: '',
         twitterUrl: '',
       });

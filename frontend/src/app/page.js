@@ -41,8 +41,9 @@ const jsonLd = {
       "url": BASE_URL,
       "image": `${BASE_URL}/images/afsal-profile.jpg`,
       "sameAs": [
-        "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/",
-        "https://github.com/afsallll005-cloud",
+        "https://www.linkedin.com/in/mohammed-afsalt",
+        "https://github.com/mhdafsalt",
+        "https://www.instagram.com/qubix.dzn",
       ],
       "address": {
         "@type": "PostalAddress",

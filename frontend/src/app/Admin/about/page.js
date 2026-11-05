@@ -37,9 +37,9 @@ export default function AboutAdmin() {
     resumeLink: "#contact",
     resumeFile: "",
     resumeFileName: "",
-    linkedinUrl: "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa",
-    githubUrl: "https://github.com/afsallll005-cloud",
-    instagramUrl: "https://www.instagram.com/web.tek_?stkn=MWwxZ3JuamVldHl2dQ==",
+    linkedinUrl: "https://www.linkedin.com/in/mohammed-afsalt",
+    githubUrl: "https://github.com/mhdafsalt",
+    instagramUrl: "https://www.instagram.com/qubix.dzn",
   });
 
   useEffect(() => {
@@ -64,9 +64,9 @@ export default function AboutAdmin() {
             resumeLink: data.resumeLink || "#contact",
             resumeFile: data.resumeFile || "",
             resumeFileName: data.resumeFileName || "",
-            linkedinUrl: data.linkedinUrl || "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa",
-            githubUrl: data.githubUrl || "https://github.com/afsallll005-cloud",
-            instagramUrl: data.instagramUrl || "https://www.instagram.com/web.tek_?stkn=MWwxZ3JuamVldHl2dQ==",
+            linkedinUrl: data.linkedinUrl || "https://www.linkedin.com/in/mohammed-afsalt",
+            githubUrl: data.githubUrl || "https://github.com/mhdafsalt",
+            instagramUrl: data.instagramUrl || "https://www.instagram.com/qubix.dzn",
           });
           if (data.resumeFile) {
             setUseResumeUrlInput(false);

@@ -8,11 +8,11 @@ const OG_IMAGE = `${BASE_URL}/images/afsal-og.jpg`;
 
 const socialLinks = {
   linkedin:
-    "https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/",
+    "https://www.linkedin.com/in/mohammed-afsalt",
   github:
-    "https://github.com/afsallll005-cloud",
+    "https://github.com/mhdafsalt",
   instagram:
-    "https://www.instagram.com/qubix.dzn?srtk=MWwxZ3JuamVldHl2dQ==",
+    "https://www.instagram.com/qubix.dzn",
 };
 
 const skills = [
@@ -206,6 +206,7 @@ const personSchema = {
   sameAs: [
     socialLinks.linkedin,
     socialLinks.github,
+    socialLinks.instagram,
   ],
 };
 

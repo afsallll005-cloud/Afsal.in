@@ -119,9 +119,9 @@ export default function Navbar() {
               </a>
             </div>
             <div className="vl-drawer-socials">
-              <a href="https://github.com/afsallll005-cloud" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/mohammed-afsal-8a52b23aa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://www.instagram.com/qubix.dzn?srtk=MWwxZ3JuamVldHl2dQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://github.com/mhdafsalt" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/mohammed-afsalt" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/qubix.dzn" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
         </div>

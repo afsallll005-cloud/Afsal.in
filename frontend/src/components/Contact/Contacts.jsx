@@ -28,7 +28,7 @@ export default function Contact() {
 
 
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/mohammed-afsalt"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -37,7 +37,7 @@ export default function Contact() {
 
 
         <a
-          href="https://github.com"
+          href="https://github.com/mhdafsalt"
           target="_blank"
           rel="noopener noreferrer"
         >
